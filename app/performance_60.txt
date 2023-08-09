@@ -1,0 +1,485 @@
+root@xilinx-zcu104-20222:~/Vitis-AI/examples/vai_library/samples/app# chmod +x performance.sh
+root@xilinx-zcu104-20222:~/Vitis-AI/examples/vai_library/samples/app# ./performance.sh
+1 threads
+yolov3
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:23:13.058272   818 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:23:13.058728   818 benchmark.hpp:214] waiting for 0/60 seconds, 1 threads running
+I0725 08:23:23.058873   818 benchmark.hpp:214] waiting for 10/60 seconds, 1 threads running
+I0725 08:23:33.059065   818 benchmark.hpp:214] waiting for 20/60 seconds, 1 threads running
+I0725 08:23:43.059257   818 benchmark.hpp:214] waiting for 30/60 seconds, 1 threads running
+I0725 08:23:53.059448   818 benchmark.hpp:214] waiting for 40/60 seconds, 1 threads running
+I0725 08:24:03.059633   818 benchmark.hpp:214] waiting for 50/60 seconds, 1 threads running
+I0725 08:24:13.059895   818 benchmark.hpp:222] waiting for threads terminated
+FPS=14.4749
+E2E_MEAN=69026.2
+DPU_MEAN=67296
+yolov3-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:24:28.247493   829 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:24:28.247949   829 benchmark.hpp:214] waiting for 0/60 seconds, 1 threads running
+I0725 08:24:38.248090   829 benchmark.hpp:214] waiting for 10/60 seconds, 1 threads running
+I0725 08:24:48.248286   829 benchmark.hpp:214] waiting for 20/60 seconds, 1 threads running
+I0725 08:24:58.248476   829 benchmark.hpp:214] waiting for 30/60 seconds, 1 threads running
+I0725 08:25:08.248680   829 benchmark.hpp:214] waiting for 40/60 seconds, 1 threads running
+I0725 08:25:18.248875   829 benchmark.hpp:214] waiting for 50/60 seconds, 1 threads running
+I0725 08:25:28.249145   829 benchmark.hpp:222] waiting for threads terminated
+FPS=105.21
+E2E_MEAN=9499.84
+DPU_MEAN=7781.75
+yolov4
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:25:47.475479   835 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:25:47.475935   835 benchmark.hpp:214] waiting for 0/60 seconds, 1 threads running
+I0725 08:25:57.476073   835 benchmark.hpp:214] waiting for 10/60 seconds, 1 threads running
+I0725 08:26:07.476267   835 benchmark.hpp:214] waiting for 20/60 seconds, 1 threads running
+I0725 08:26:17.476465   835 benchmark.hpp:214] waiting for 30/60 seconds, 1 threads running
+I0725 08:26:27.476665   835 benchmark.hpp:214] waiting for 40/60 seconds, 1 threads running
+I0725 08:26:37.476892   835 benchmark.hpp:214] waiting for 50/60 seconds, 1 threads running
+I0725 08:26:47.477154   835 benchmark.hpp:222] waiting for threads terminated
+FPS=15.3346
+E2E_MEAN=65146.3
+DPU_MEAN=63299.9
+yolov4-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:27:02.370509   845 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:27:02.370952   845 benchmark.hpp:214] waiting for 0/60 seconds, 1 threads running
+I0725 08:27:12.371093   845 benchmark.hpp:214] waiting for 10/60 seconds, 1 threads running
+I0725 08:27:22.371287   845 benchmark.hpp:214] waiting for 20/60 seconds, 1 threads running
+I0725 08:27:32.371487   845 benchmark.hpp:214] waiting for 30/60 seconds, 1 threads running
+I0725 08:27:42.371680   845 benchmark.hpp:214] waiting for 40/60 seconds, 1 threads running
+I0725 08:27:52.371874   845 benchmark.hpp:214] waiting for 50/60 seconds, 1 threads running
+I0725 08:28:02.372143   845 benchmark.hpp:222] waiting for threads terminated
+FPS=88.9023
+E2E_MEAN=11243.2
+DPU_MEAN=9513.55
+yolov5m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:28:18.423454   854 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:28:18.423913   854 benchmark.hpp:214] waiting for 0/60 seconds, 1 threads running
+I0725 08:28:28.424057   854 benchmark.hpp:214] waiting for 10/60 seconds, 1 threads running
+I0725 08:28:38.424261   854 benchmark.hpp:214] waiting for 20/60 seconds, 1 threads running
+I0725 08:28:48.424461   854 benchmark.hpp:214] waiting for 30/60 seconds, 1 threads running
+I0725 08:28:58.424659   854 benchmark.hpp:214] waiting for 40/60 seconds, 1 threads running
+I0725 08:29:08.424844   854 benchmark.hpp:214] waiting for 50/60 seconds, 1 threads running
+I0725 08:29:18.425117   854 benchmark.hpp:222] waiting for threads terminated
+FPS=41.1599
+E2E_MEAN=24282.6
+DPU_MEAN=22295
+yolov5s
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:29:33.497021   862 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:29:33.497551   862 benchmark.hpp:214] waiting for 0/60 seconds, 1 threads running
+I0725 08:29:43.497707   862 benchmark.hpp:214] waiting for 10/60 seconds, 1 threads running
+I0725 08:29:53.497898   862 benchmark.hpp:214] waiting for 20/60 seconds, 1 threads running
+I0725 08:30:03.498085   862 benchmark.hpp:214] waiting for 30/60 seconds, 1 threads running
+I0725 08:30:13.498278   862 benchmark.hpp:214] waiting for 40/60 seconds, 1 threads running
+I0725 08:30:23.498476   862 benchmark.hpp:214] waiting for 50/60 seconds, 1 threads running
+I0725 08:30:33.498798   862 benchmark.hpp:222] waiting for threads terminated
+FPS=96.6305
+E2E_MEAN=10343.3
+DPU_MEAN=8380.42
+yolov5n
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:30:48.227496   869 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:30:48.227953   869 benchmark.hpp:214] waiting for 0/60 seconds, 1 threads running
+I0725 08:30:58.228098   869 benchmark.hpp:214] waiting for 10/60 seconds, 1 threads running
+I0725 08:31:08.228291   869 benchmark.hpp:214] waiting for 20/60 seconds, 1 threads running
+I0725 08:31:18.228487   869 benchmark.hpp:214] waiting for 30/60 seconds, 1 threads running
+I0725 08:31:28.228686   869 benchmark.hpp:214] waiting for 40/60 seconds, 1 threads running
+I0725 08:31:38.228878   869 benchmark.hpp:214] waiting for 50/60 seconds, 1 threads running
+I0725 08:31:48.229146   869 benchmark.hpp:222] waiting for threads terminated
+FPS=191.14
+E2E_MEAN=5228.12
+DPU_MEAN=3229.44
+2 threads
+yolov3
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:32:04.395336   878 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:32:04.851394   878 benchmark.hpp:214] waiting for 0/60 seconds, 2 threads running
+I0725 08:32:14.851647   878 benchmark.hpp:214] waiting for 10/60 seconds, 2 threads running
+I0725 08:32:24.851905   878 benchmark.hpp:214] waiting for 20/60 seconds, 2 threads running
+I0725 08:32:34.852124   878 benchmark.hpp:214] waiting for 30/60 seconds, 2 threads running
+I0725 08:32:44.852314   878 benchmark.hpp:214] waiting for 40/60 seconds, 2 threads running
+I0725 08:32:54.852572   878 benchmark.hpp:214] waiting for 50/60 seconds, 2 threads running
+I0725 08:33:04.852843   878 benchmark.hpp:222] waiting for threads terminated
+FPS=28.1051
+yolov3-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:33:19.480711   886 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:33:19.524369   886 benchmark.hpp:214] waiting for 0/60 seconds, 2 threads running
+I0725 08:33:29.524569   886 benchmark.hpp:214] waiting for 10/60 seconds, 2 threads running
+I0725 08:33:39.524782   886 benchmark.hpp:214] waiting for 20/60 seconds, 2 threads running
+I0725 08:33:49.524993   886 benchmark.hpp:214] waiting for 30/60 seconds, 2 threads running
+I0725 08:33:59.525216   886 benchmark.hpp:214] waiting for 40/60 seconds, 2 threads running
+I0725 08:34:09.525449   886 benchmark.hpp:214] waiting for 50/60 seconds, 2 threads running
+I0725 08:34:19.525723   886 benchmark.hpp:222] waiting for threads terminated
+FPS=206.747
+yolov4
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:34:36.756529   896 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:34:37.285027   896 benchmark.hpp:214] waiting for 0/60 seconds, 2 threads running
+I0725 08:34:47.285271   896 benchmark.hpp:214] waiting for 10/60 seconds, 2 threads running
+I0725 08:34:57.285548   896 benchmark.hpp:214] waiting for 20/60 seconds, 2 threads running
+I0725 08:35:07.285768   896 benchmark.hpp:214] waiting for 30/60 seconds, 2 threads running
+I0725 08:35:17.285992   896 benchmark.hpp:214] waiting for 40/60 seconds, 2 threads running
+I0725 08:35:27.286216   896 benchmark.hpp:214] waiting for 50/60 seconds, 2 threads running
+I0725 08:35:37.286476   896 benchmark.hpp:222] waiting for threads terminated
+FPS=28.7822
+yolov4-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:35:51.890481   905 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:35:51.932969   905 benchmark.hpp:214] waiting for 0/60 seconds, 2 threads running
+I0725 08:36:01.933174   905 benchmark.hpp:214] waiting for 10/60 seconds, 2 threads running
+I0725 08:36:11.933370   905 benchmark.hpp:214] waiting for 20/60 seconds, 2 threads running
+I0725 08:36:21.933616   905 benchmark.hpp:214] waiting for 30/60 seconds, 2 threads running
+I0725 08:36:31.933800   905 benchmark.hpp:214] waiting for 40/60 seconds, 2 threads running
+I0725 08:36:41.933990   905 benchmark.hpp:214] waiting for 50/60 seconds, 2 threads running
+I0725 08:36:51.934258   905 benchmark.hpp:222] waiting for threads terminated
+FPS=170.664
+yolov5m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:37:07.515540   913 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:37:07.707733   913 benchmark.hpp:214] waiting for 0/60 seconds, 2 threads running
+I0725 08:37:17.707952   913 benchmark.hpp:214] waiting for 10/60 seconds, 2 threads running
+I0725 08:37:27.708199   913 benchmark.hpp:214] waiting for 20/60 seconds, 2 threads running
+I0725 08:37:37.708405   913 benchmark.hpp:214] waiting for 30/60 seconds, 2 threads running
+I0725 08:37:47.708600   913 benchmark.hpp:214] waiting for 40/60 seconds, 2 threads running
+I0725 08:37:57.708817   913 benchmark.hpp:214] waiting for 50/60 seconds, 2 threads running
+I0725 08:38:07.709233   913 benchmark.hpp:222] waiting for threads terminated
+FPS=76.785
+yolov5s
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:38:22.391479   924 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:38:22.475459   924 benchmark.hpp:214] waiting for 0/60 seconds, 2 threads running
+I0725 08:38:32.475725   924 benchmark.hpp:214] waiting for 10/60 seconds, 2 threads running
+I0725 08:38:42.476034   924 benchmark.hpp:214] waiting for 20/60 seconds, 2 threads running
+I0725 08:38:52.476253   924 benchmark.hpp:214] waiting for 30/60 seconds, 2 threads running
+I0725 08:39:02.476549   924 benchmark.hpp:214] waiting for 40/60 seconds, 2 threads running
+I0725 08:39:12.476752   924 benchmark.hpp:214] waiting for 50/60 seconds, 2 threads running
+I0725 08:39:22.477033   924 benchmark.hpp:222] waiting for threads terminated
+FPS=173.833
+yolov5n
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:39:37.100414   933 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:39:37.163513   933 benchmark.hpp:214] waiting for 0/60 seconds, 2 threads running
+I0725 08:39:47.163726   933 benchmark.hpp:214] waiting for 10/60 seconds, 2 threads running
+I0725 08:39:57.163937   933 benchmark.hpp:214] waiting for 20/60 seconds, 2 threads running
+I0725 08:40:07.164131   933 benchmark.hpp:214] waiting for 30/60 seconds, 2 threads running
+I0725 08:40:17.164381   933 benchmark.hpp:214] waiting for 40/60 seconds, 2 threads running
+I0725 08:40:27.164572   933 benchmark.hpp:214] waiting for 50/60 seconds, 2 threads running
+I0725 08:40:37.164850   933 benchmark.hpp:222] waiting for threads terminated
+FPS=331.999
+3 threads
+yolov3
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:40:53.245357   941 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:40:54.083494   941 benchmark.hpp:214] waiting for 0/60 seconds, 3 threads running
+I0725 08:41:04.083716   941 benchmark.hpp:214] waiting for 10/60 seconds, 3 threads running
+I0725 08:41:14.083920   941 benchmark.hpp:214] waiting for 20/60 seconds, 3 threads running
+I0725 08:41:24.084236   941 benchmark.hpp:214] waiting for 30/60 seconds, 3 threads running
+I0725 08:41:34.084455   941 benchmark.hpp:214] waiting for 40/60 seconds, 3 threads running
+I0725 08:41:44.084656   941 benchmark.hpp:214] waiting for 50/60 seconds, 3 threads running
+I0725 08:41:54.084935   941 benchmark.hpp:222] waiting for threads terminated
+FPS=28.4685
+yolov3-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:42:08.781327   949 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:42:08.848867   949 benchmark.hpp:214] waiting for 0/60 seconds, 3 threads running
+I0725 08:42:18.849078   949 benchmark.hpp:214] waiting for 10/60 seconds, 3 threads running
+I0725 08:42:28.849293   949 benchmark.hpp:214] waiting for 20/60 seconds, 3 threads running
+I0725 08:42:38.849495   949 benchmark.hpp:214] waiting for 30/60 seconds, 3 threads running
+I0725 08:42:48.849704   949 benchmark.hpp:214] waiting for 40/60 seconds, 3 threads running
+I0725 08:42:58.849917   949 benchmark.hpp:214] waiting for 50/60 seconds, 3 threads running
+I0725 08:43:08.850188   949 benchmark.hpp:222] waiting for threads terminated
+FPS=231.522
+yolov4
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:43:25.697394   960 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:43:26.720888   960 benchmark.hpp:214] waiting for 0/60 seconds, 3 threads running
+I0725 08:43:36.721103   960 benchmark.hpp:214] waiting for 10/60 seconds, 3 threads running
+I0725 08:43:46.721323   960 benchmark.hpp:214] waiting for 20/60 seconds, 3 threads running
+I0725 08:43:56.721661   960 benchmark.hpp:214] waiting for 30/60 seconds, 3 threads running
+I0725 08:44:06.722163   960 benchmark.hpp:214] waiting for 40/60 seconds, 3 threads running
+I0725 08:44:16.722424   960 benchmark.hpp:214] waiting for 50/60 seconds, 3 threads running
+I0725 08:44:26.722697   960 benchmark.hpp:222] waiting for threads terminated
+FPS=29.1825
+yolov4-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:44:41.439028   972 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:44:41.506770   972 benchmark.hpp:214] waiting for 0/60 seconds, 3 threads running
+I0725 08:44:51.506980   972 benchmark.hpp:214] waiting for 10/60 seconds, 3 threads running
+I0725 08:45:01.507179   972 benchmark.hpp:214] waiting for 20/60 seconds, 3 threads running
+I0725 08:45:11.507484   972 benchmark.hpp:214] waiting for 30/60 seconds, 3 threads running
+I0725 08:45:21.507720   972 benchmark.hpp:214] waiting for 40/60 seconds, 3 threads running
+I0725 08:45:31.507985   972 benchmark.hpp:214] waiting for 50/60 seconds, 3 threads running
+I0725 08:45:41.508251   972 benchmark.hpp:222] waiting for threads terminated
+FPS=186.666
+yolov5m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:45:56.701620   981 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:45:57.057125   981 benchmark.hpp:214] waiting for 0/60 seconds, 3 threads running
+I0725 08:46:07.057377   981 benchmark.hpp:214] waiting for 10/60 seconds, 3 threads running
+I0725 08:46:17.057579   981 benchmark.hpp:214] waiting for 20/60 seconds, 3 threads running
+I0725 08:46:27.057862   981 benchmark.hpp:214] waiting for 30/60 seconds, 3 threads running
+I0725 08:46:37.058204   981 benchmark.hpp:214] waiting for 40/60 seconds, 3 threads running
+I0725 08:46:47.058490   981 benchmark.hpp:214] waiting for 50/60 seconds, 3 threads running
+I0725 08:46:57.058840   981 benchmark.hpp:222] waiting for threads terminated
+FPS=80.0678
+yolov5s
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:47:11.819952   989 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:47:11.966661   989 benchmark.hpp:214] waiting for 0/60 seconds, 3 threads running
+I0725 08:47:21.966964   989 benchmark.hpp:214] waiting for 10/60 seconds, 3 threads running
+I0725 08:47:31.967255   989 benchmark.hpp:214] waiting for 20/60 seconds, 3 threads running
+I0725 08:47:41.967474   989 benchmark.hpp:214] waiting for 30/60 seconds, 3 threads running
+I0725 08:47:51.967680   989 benchmark.hpp:214] waiting for 40/60 seconds, 3 threads running
+I0725 08:48:01.967892   989 benchmark.hpp:214] waiting for 50/60 seconds, 3 threads running
+I0725 08:48:11.968204   989 benchmark.hpp:222] waiting for threads terminated
+FPS=193.044
+yolov5n
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:48:26.676867  1002 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:48:26.795312  1002 benchmark.hpp:214] waiting for 0/60 seconds, 3 threads running
+I0725 08:48:36.795559  1002 benchmark.hpp:214] waiting for 10/60 seconds, 3 threads running
+I0725 08:48:46.795886  1002 benchmark.hpp:214] waiting for 20/60 seconds, 3 threads running
+I0725 08:48:56.796159  1002 benchmark.hpp:214] waiting for 30/60 seconds, 3 threads running
+I0725 08:49:06.796420  1002 benchmark.hpp:214] waiting for 40/60 seconds, 3 threads running
+I0725 08:49:16.796643  1002 benchmark.hpp:214] waiting for 50/60 seconds, 3 threads running
+I0725 08:49:26.796936  1002 benchmark.hpp:222] waiting for threads terminated
+FPS=433.824
+4 threads
+yolov3
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:49:42.874655  1011 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:49:44.140884  1011 benchmark.hpp:214] waiting for 0/60 seconds, 4 threads running
+I0725 08:49:54.141098  1011 benchmark.hpp:214] waiting for 10/60 seconds, 4 threads running
+I0725 08:50:04.141299  1011 benchmark.hpp:214] waiting for 20/60 seconds, 4 threads running
+I0725 08:50:14.141520  1011 benchmark.hpp:214] waiting for 30/60 seconds, 4 threads running
+I0725 08:50:24.141716  1011 benchmark.hpp:214] waiting for 40/60 seconds, 4 threads running
+I0725 08:50:34.141956  1011 benchmark.hpp:214] waiting for 50/60 seconds, 4 threads running
+I0725 08:50:44.142421  1011 benchmark.hpp:222] waiting for threads terminated
+FPS=28.8221
+yolov3-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:50:58.882526  1021 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:50:58.983134  1021 benchmark.hpp:214] waiting for 0/60 seconds, 4 threads running
+I0725 08:51:08.983356  1021 benchmark.hpp:214] waiting for 10/60 seconds, 4 threads running
+I0725 08:51:18.983552  1021 benchmark.hpp:214] waiting for 20/60 seconds, 4 threads running
+I0725 08:51:28.983747  1021 benchmark.hpp:214] waiting for 30/60 seconds, 4 threads running
+I0725 08:51:38.983958  1021 benchmark.hpp:214] waiting for 40/60 seconds, 4 threads running
+I0725 08:51:48.984163  1021 benchmark.hpp:214] waiting for 50/60 seconds, 4 threads running
+I0725 08:51:58.984450  1021 benchmark.hpp:222] waiting for threads terminated
+FPS=256.329
+yolov4
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:52:15.548424  1030 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:52:17.101033  1030 benchmark.hpp:214] waiting for 0/60 seconds, 4 threads running
+I0725 08:52:27.101243  1030 benchmark.hpp:214] waiting for 10/60 seconds, 4 threads running
+I0725 08:52:37.101454  1030 benchmark.hpp:214] waiting for 20/60 seconds, 4 threads running
+I0725 08:52:47.101650  1030 benchmark.hpp:214] waiting for 30/60 seconds, 4 threads running
+I0725 08:52:57.101917  1030 benchmark.hpp:214] waiting for 40/60 seconds, 4 threads running
+I0725 08:53:07.102216  1030 benchmark.hpp:214] waiting for 50/60 seconds, 4 threads running
+I0725 08:53:17.102520  1030 benchmark.hpp:222] waiting for threads terminated
+FPS=29.5889
+yolov4-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:53:31.777055  1047 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:53:31.876008  1047 benchmark.hpp:214] waiting for 0/60 seconds, 4 threads running
+I0725 08:53:41.876278  1047 benchmark.hpp:214] waiting for 10/60 seconds, 4 threads running
+I0725 08:53:51.876608  1047 benchmark.hpp:214] waiting for 20/60 seconds, 4 threads running
+I0725 08:54:01.876828  1047 benchmark.hpp:214] waiting for 30/60 seconds, 4 threads running
+I0725 08:54:11.877064  1047 benchmark.hpp:214] waiting for 40/60 seconds, 4 threads running
+I0725 08:54:21.877460  1047 benchmark.hpp:214] waiting for 50/60 seconds, 4 threads running
+I0725 08:54:31.877789  1047 benchmark.hpp:222] waiting for threads terminated
+FPS=202.268
+yolov5m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:54:47.019677  1056 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:54:47.524830  1056 benchmark.hpp:214] waiting for 0/60 seconds, 4 threads running
+I0725 08:54:57.525056  1056 benchmark.hpp:214] waiting for 10/60 seconds, 4 threads running
+I0725 08:55:07.525388  1056 benchmark.hpp:214] waiting for 20/60 seconds, 4 threads running
+I0725 08:55:17.525671  1056 benchmark.hpp:214] waiting for 30/60 seconds, 4 threads running
+I0725 08:55:27.526057  1056 benchmark.hpp:214] waiting for 40/60 seconds, 4 threads running
+I0725 08:55:37.526355  1056 benchmark.hpp:214] waiting for 50/60 seconds, 4 threads running
+I0725 08:55:47.526666  1056 benchmark.hpp:222] waiting for threads terminated
+FPS=83.1379
+yolov5s
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:56:02.235033  1066 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:56:02.450948  1066 benchmark.hpp:214] waiting for 0/60 seconds, 4 threads running
+I0725 08:56:12.451166  1066 benchmark.hpp:214] waiting for 10/60 seconds, 4 threads running
+I0725 08:56:22.451377  1066 benchmark.hpp:214] waiting for 20/60 seconds, 4 threads running
+I0725 08:56:32.451676  1066 benchmark.hpp:214] waiting for 30/60 seconds, 4 threads running
+I0725 08:56:42.452039  1066 benchmark.hpp:214] waiting for 40/60 seconds, 4 threads running
+I0725 08:56:52.452438  1066 benchmark.hpp:214] waiting for 50/60 seconds, 4 threads running
+I0725 08:57:02.452922  1066 benchmark.hpp:222] waiting for threads terminated
+FPS=207.932
+yolov5n
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:57:17.106839  1075 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:57:17.284286  1075 benchmark.hpp:214] waiting for 0/60 seconds, 4 threads running
+I0725 08:57:27.284567  1075 benchmark.hpp:214] waiting for 10/60 seconds, 4 threads running
+I0725 08:57:37.284968  1075 benchmark.hpp:214] waiting for 20/60 seconds, 4 threads running
+I0725 08:57:47.285384  1075 benchmark.hpp:214] waiting for 30/60 seconds, 4 threads running
+I0725 08:57:57.285701  1075 benchmark.hpp:214] waiting for 40/60 seconds, 4 threads running
+I0725 08:58:07.286078  1075 benchmark.hpp:214] waiting for 50/60 seconds, 4 threads running
+I0725 08:58:17.286511  1075 benchmark.hpp:222] waiting for threads terminated
+FPS=487.765
+5 threads
+yolov3
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:58:33.363248  1085 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:58:35.027803  1085 benchmark.hpp:214] waiting for 0/60 seconds, 5 threads running
+I0725 08:58:45.028023  1085 benchmark.hpp:214] waiting for 10/60 seconds, 5 threads running
+I0725 08:58:55.028215  1085 benchmark.hpp:214] waiting for 20/60 seconds, 5 threads running
+I0725 08:59:05.028534  1085 benchmark.hpp:214] waiting for 30/60 seconds, 5 threads running
+I0725 08:59:15.028738  1085 benchmark.hpp:214] waiting for 40/60 seconds, 5 threads running
+I0725 08:59:25.028947  1085 benchmark.hpp:214] waiting for 50/60 seconds, 5 threads running
+I0725 08:59:35.029215  1085 benchmark.hpp:222] waiting for threads terminated
+FPS=28.8083
+yolov3-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 08:59:49.799652  1100 benchmark.hpp:187] writing report to <STDOUT>
+I0725 08:59:49.922175  1100 benchmark.hpp:214] waiting for 0/60 seconds, 5 threads running
+I0725 08:59:59.922381  1100 benchmark.hpp:214] waiting for 10/60 seconds, 5 threads running
+I0725 09:00:09.922665  1100 benchmark.hpp:214] waiting for 20/60 seconds, 5 threads running
+I0725 09:00:19.922881  1100 benchmark.hpp:214] waiting for 30/60 seconds, 5 threads running
+I0725 09:00:29.923106  1100 benchmark.hpp:214] waiting for 40/60 seconds, 5 threads running
+I0725 09:00:39.923346  1100 benchmark.hpp:214] waiting for 50/60 seconds, 5 threads running
+I0725 09:00:49.923781  1100 benchmark.hpp:222] waiting for threads terminated
+FPS=255.892
+yolov4
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:01:06.350504  1112 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:01:08.393142  1112 benchmark.hpp:214] waiting for 0/60 seconds, 5 threads running
+I0725 09:01:18.393365  1112 benchmark.hpp:214] waiting for 10/60 seconds, 5 threads running
+I0725 09:01:28.393566  1112 benchmark.hpp:214] waiting for 20/60 seconds, 5 threads running
+I0725 09:01:38.393765  1112 benchmark.hpp:214] waiting for 30/60 seconds, 5 threads running
+I0725 09:01:48.393971  1112 benchmark.hpp:214] waiting for 40/60 seconds, 5 threads running
+I0725 09:01:58.394205  1112 benchmark.hpp:214] waiting for 50/60 seconds, 5 threads running
+I0725 09:02:08.394511  1112 benchmark.hpp:222] waiting for threads terminated
+FPS=29.576
+yolov4-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:02:23.182672  1122 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:02:23.306710  1122 benchmark.hpp:214] waiting for 0/60 seconds, 5 threads running
+I0725 09:02:33.306916  1122 benchmark.hpp:214] waiting for 10/60 seconds, 5 threads running
+I0725 09:02:43.307183  1122 benchmark.hpp:214] waiting for 20/60 seconds, 5 threads running
+I0725 09:02:53.307632  1122 benchmark.hpp:214] waiting for 30/60 seconds, 5 threads running
+I0725 09:03:03.307910  1122 benchmark.hpp:214] waiting for 40/60 seconds, 5 threads running
+I0725 09:03:13.308121  1122 benchmark.hpp:214] waiting for 50/60 seconds, 5 threads running
+I0725 09:03:23.308454  1122 benchmark.hpp:222] waiting for threads terminated
+FPS=201.974
+yolov5m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:03:38.456424  1134 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:03:39.150483  1134 benchmark.hpp:214] waiting for 0/60 seconds, 5 threads running
+I0725 09:03:49.150710  1134 benchmark.hpp:214] waiting for 10/60 seconds, 5 threads running
+I0725 09:03:59.150935  1134 benchmark.hpp:214] waiting for 20/60 seconds, 5 threads running
+I0725 09:04:09.151309  1134 benchmark.hpp:214] waiting for 30/60 seconds, 5 threads running
+I0725 09:04:19.151531  1134 benchmark.hpp:214] waiting for 40/60 seconds, 5 threads running
+I0725 09:04:29.152050  1134 benchmark.hpp:214] waiting for 50/60 seconds, 5 threads running
+I0725 09:04:39.152602  1134 benchmark.hpp:222] waiting for threads terminated
+FPS=82.9844
+yolov5s
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:04:53.967525  1148 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:04:54.245280  1148 benchmark.hpp:214] waiting for 0/60 seconds, 5 threads running
+I0725 09:05:04.245497  1148 benchmark.hpp:214] waiting for 10/60 seconds, 5 threads running
+I0725 09:05:14.245779  1148 benchmark.hpp:214] waiting for 20/60 seconds, 5 threads running
+I0725 09:05:24.246050  1148 benchmark.hpp:214] waiting for 30/60 seconds, 5 threads running
+I0725 09:05:34.246357  1148 benchmark.hpp:214] waiting for 40/60 seconds, 5 threads running
+I0725 09:05:44.246667  1148 benchmark.hpp:214] waiting for 50/60 seconds, 5 threads running
+I0725 09:05:54.247040  1148 benchmark.hpp:222] waiting for threads terminated
+FPS=206.211
+yolov5n
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:06:08.920320  1158 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:06:09.153216  1158 benchmark.hpp:214] waiting for 0/60 seconds, 5 threads running
+I0725 09:06:19.153462  1158 benchmark.hpp:214] waiting for 10/60 seconds, 5 threads running
+I0725 09:06:29.153707  1158 benchmark.hpp:214] waiting for 20/60 seconds, 5 threads running
+I0725 09:06:39.154028  1158 benchmark.hpp:214] waiting for 30/60 seconds, 5 threads running
+I0725 09:06:49.154363  1158 benchmark.hpp:214] waiting for 40/60 seconds, 5 threads running
+I0725 09:06:59.154578  1158 benchmark.hpp:214] waiting for 50/60 seconds, 5 threads running
+I0725 09:07:09.154871  1158 benchmark.hpp:222] waiting for threads terminated
+FPS=472.18
+6 threads
+yolov3
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:07:25.202288  1169 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:07:27.284461  1169 benchmark.hpp:214] waiting for 0/60 seconds, 6 threads running
+I0725 09:07:37.284677  1169 benchmark.hpp:214] waiting for 10/60 seconds, 6 threads running
+I0725 09:07:47.284880  1169 benchmark.hpp:214] waiting for 20/60 seconds, 6 threads running
+I0725 09:07:57.285079  1169 benchmark.hpp:214] waiting for 30/60 seconds, 6 threads running
+I0725 09:08:07.285274  1169 benchmark.hpp:214] waiting for 40/60 seconds, 6 threads running
+I0725 09:08:17.285480  1169 benchmark.hpp:214] waiting for 50/60 seconds, 6 threads running
+I0725 09:08:27.285826  1169 benchmark.hpp:222] waiting for threads terminated
+FPS=28.814
+yolov3-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:08:42.050895  1181 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:08:42.196846  1181 benchmark.hpp:214] waiting for 0/60 seconds, 6 threads running
+I0725 09:08:52.197084  1181 benchmark.hpp:214] waiting for 10/60 seconds, 6 threads running
+I0725 09:09:02.197321  1181 benchmark.hpp:214] waiting for 20/60 seconds, 6 threads running
+I0725 09:09:12.197619  1181 benchmark.hpp:214] waiting for 30/60 seconds, 6 threads running
+I0725 09:09:22.197875  1181 benchmark.hpp:214] waiting for 40/60 seconds, 6 threads running
+I0725 09:09:32.198071  1181 benchmark.hpp:214] waiting for 50/60 seconds, 6 threads running
+I0725 09:09:42.198359  1181 benchmark.hpp:222] waiting for threads terminated
+FPS=254.057
+yolov4
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:09:58.684756  1196 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:10:01.228518  1196 benchmark.hpp:214] waiting for 0/60 seconds, 6 threads running
+I0725 09:10:11.228814  1196 benchmark.hpp:214] waiting for 10/60 seconds, 6 threads running
+I0725 09:10:21.229216  1196 benchmark.hpp:214] waiting for 20/60 seconds, 6 threads running
+I0725 09:10:31.229444  1196 benchmark.hpp:214] waiting for 30/60 seconds, 6 threads running
+I0725 09:10:41.229635  1196 benchmark.hpp:214] waiting for 40/60 seconds, 6 threads running
+I0725 09:10:51.229823  1196 benchmark.hpp:214] waiting for 50/60 seconds, 6 threads running
+I0725 09:11:01.230687  1196 benchmark.hpp:222] waiting for threads terminated
+FPS=29.4775
+yolov4-tiny
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:11:16.068722  1207 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:11:16.217330  1207 benchmark.hpp:214] waiting for 0/60 seconds, 6 threads running
+I0725 09:11:26.217566  1207 benchmark.hpp:214] waiting for 10/60 seconds, 6 threads running
+I0725 09:11:36.217839  1207 benchmark.hpp:214] waiting for 20/60 seconds, 6 threads running
+I0725 09:11:46.218055  1207 benchmark.hpp:214] waiting for 30/60 seconds, 6 threads running
+I0725 09:11:56.218293  1207 benchmark.hpp:214] waiting for 40/60 seconds, 6 threads running
+I0725 09:12:06.218538  1207 benchmark.hpp:214] waiting for 50/60 seconds, 6 threads running
+I0725 09:12:16.218822  1207 benchmark.hpp:222] waiting for threads terminated
+FPS=197.991
+yolov5m
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:12:31.354950  1221 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:12:32.225564  1221 benchmark.hpp:214] waiting for 0/60 seconds, 6 threads running
+I0725 09:12:42.225776  1221 benchmark.hpp:214] waiting for 10/60 seconds, 6 threads running
+I0725 09:12:52.226018  1221 benchmark.hpp:214] waiting for 20/60 seconds, 6 threads running
+I0725 09:13:02.226333  1221 benchmark.hpp:214] waiting for 30/60 seconds, 6 threads running
+I0725 09:13:12.226621  1221 benchmark.hpp:214] waiting for 40/60 seconds, 6 threads running
+I0725 09:13:22.226837  1221 benchmark.hpp:214] waiting for 50/60 seconds, 6 threads running
+I0725 09:13:32.227208  1221 benchmark.hpp:222] waiting for threads terminated
+FPS=82.7774
+yolov5s
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:13:46.991017  1232 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:13:47.332378  1232 benchmark.hpp:214] waiting for 0/60 seconds, 6 threads running
+I0725 09:13:57.332624  1232 benchmark.hpp:214] waiting for 10/60 seconds, 6 threads running
+I0725 09:14:07.332947  1232 benchmark.hpp:214] waiting for 20/60 seconds, 6 threads running
+I0725 09:14:17.333269  1232 benchmark.hpp:214] waiting for 30/60 seconds, 6 threads running
+I0725 09:14:27.333581  1232 benchmark.hpp:214] waiting for 40/60 seconds, 6 threads running
+I0725 09:14:37.333845  1232 benchmark.hpp:214] waiting for 50/60 seconds, 6 threads running
+I0725 09:14:47.334228  1232 benchmark.hpp:222] waiting for threads terminated
+FPS=203.329
+yolov5n
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0725 09:15:02.010250  1246 benchmark.hpp:187] writing report to <STDOUT>
+I0725 09:15:02.297303  1246 benchmark.hpp:214] waiting for 0/60 seconds, 6 threads running
+I0725 09:15:12.297560  1246 benchmark.hpp:214] waiting for 10/60 seconds, 6 threads running
+I0725 09:15:22.297817  1246 benchmark.hpp:214] waiting for 20/60 seconds, 6 threads running
+I0725 09:15:32.298066  1246 benchmark.hpp:214] waiting for 30/60 seconds, 6 threads running
+I0725 09:15:42.298272  1246 benchmark.hpp:214] waiting for 40/60 seconds, 6 threads running
+I0725 09:15:52.298509  1246 benchmark.hpp:214] waiting for 50/60 seconds, 6 threads running
+I0725 09:16:02.298913  1246 benchmark.hpp:222] waiting for threads terminated
+FPS=458.155
+root@xilinx-zcu104-20222:~/Vitis-AI/examples/vai_library/samples/app# 
