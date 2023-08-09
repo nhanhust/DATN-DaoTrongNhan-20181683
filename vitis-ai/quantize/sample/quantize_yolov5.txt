@@ -1,0 +1,264 @@
+train yolov5: (sau khi git clone thi thay ham loss)
+
+%cd /content/drive/MyDrive/yolov5/yolov5/models
+!sed -i 's/nn.SiLU()/nn.LeakyReLU(0.1, inplace=True)/g' common.py
+!sed -i 's/nn.SiLU()/nn.LeakyReLU(0.1, inplace=True)/g' experimental.py
+
+quantize yolov5:
+Run docker: in Vitis-AI folder
+./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+
+clone yolov5: (thay ham forward trong models/yolo.py) (thay ham loss nhu khi train nua)
+git clone https://github.com/ultralytics/yolov5 quantize/sample
+
+thay ham loss:
+sed -i 's/nn.SiLU()/nn.LeakyReLU(0.1, inplace=True)/g' quantize/sample/yolov5/models/common.py
+sed -i 's/nn.SiLU()/nn.LeakyReLU(0.1, inplace=True)/g' quantize/sample/yolov5/models/experimental.py
+thay ham forward: (change the forward function in yolov5/models/yolo.py)
+def forward(self, x):
+        for i in range(self.nl):
+            x[i] = self.m[i](x[i])  # conv
+        return x
+
+
+cai dat cac thu vien de chay:
+pip install -r quantize/sample/yolov5/requirements.txt
+
+conda activate vitis-ai-pytorch
+pip install -r quantize/sample/yolov5/requirements.txt
+
+chuan bi file weight de quantize: (dat trong thu muc nhu tren)
+
+dieu chinh anh quantize dau vao: (host) va copy file quantize.py vao thu muc yolov5
+cp quantize/sample/quantize.py quantize/sample/yolov5/quantize.py 
+sed -i 's/640/416/g' quantize/sample/yolov5/quantize.py 
+sed -i 's/.png/.jpg/g' quantize/sample/yolov5/quantize.py 
+
+python quantize/sample/yolov5/quantize.py --build_dir quantize/yolov5ss --quant_mode calib --weights quantize/yolov5s/best.pt --dataset quantize/calib/
+
+python quantize/sample/yolov5/quantize.py --build_dir quantize/yolov5s --quant_mode test --weights quantize/yolov5s/best.pt --dataset quantize/calib/
+
+Tao file arch2.json:
+cd /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104
+sudo cp -v arch.json arch2.json
+sudo vim arch2.json
+i
+{ "fingerprint": "0x101000056010407" }
+esc
+:w
+:q
+cat arch2.json
+cd /workspace
+
+vai_c_xir -x quantize/yolov5s/quant_model/DetectMultiBackend_int.xmodel -a /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104/arch2.json -o quantize/yolov5s/compile_model -n dpu_yolov5s_facemask
+
+xir subgraph quantize/yolov5s/compile_model/dpu_yolov5s_facemask.xmodel | grep DPU
+
+xir subgraph quantize/yolov5m/compile_model/dpu_yolov5m_facemask.xmodel | grep DPU
+    subgraph_DetectMultiBackend__DetectMultiBackend_DetectionModel_model__C3_model__C3_13__Conv_cv1__Conv2d_conv__input_189 [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{DetectMultiBackend__input_0_fix:(1,416,416,3), fixpos=6 # of elements= 519168}],O=[xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_0__13274_fix:(1,52,52,24), fixpos=2 # of elements= 64896},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_1__13293_fix:(1,26,26,24), fixpos=2 # of elements= 16224},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_2__13312_fix:(1,13,13,24), fixpos=2 # of elements= 4056}]]
+
+xir subgraph quantize/yolov5n/compile_model/dpu_yolov5n_facemask.xmodel | grep DPU
+    subgraph_DetectMultiBackend__DetectMultiBackend_DetectionModel_model__C3_model__C3_13__Conv_cv1__Conv2d_conv__input_133 [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{DetectMultiBackend__input_0_fix:(1,416,416,3), fixpos=6 # of elements= 519168}],O=[xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_0__9285_fix:(1,52,52,24), fixpos=1 # of elements= 64896},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_1__9304_fix:(1,26,26,24), fixpos=2 # of elements= 16224},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_2__9323_fix:(1,13,13,24), fixpos=3 # of elements= 4056}]]
+
+
+xir subgraph quantize/yolov5s/compile_model/dpu_yolov5s_facemask.xmodel | grep DPU
+    subgraph_DetectMultiBackend__DetectMultiBackend_DetectionModel_model__C3_model__C3_13__Conv_cv1__Conv2d_conv__input_133 [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{DetectMultiBackend__input_0_fix:(1,416,416,3), fixpos=6 # of elements= 519168}],O=[xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_0__9285_fix:(1,52,52,24), fixpos=2 # of elements= 64896},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_1__9304_fix:(1,26,26,24), fixpos=2 # of elements= 16224},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_2__9323_fix:(1,13,13,24), fixpos=2 # of elements= 4056}]]
+
+
+1: subgraph_DetectMultiBackend__DetectMultiBackend_DetectionModel_model__C3_model__C3_13__Conv_cv1__Conv2d_conv__input_189 [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{DetectMultiBackend__input_0_fix:(1,640,640,3), fixpos=6 # of elements= 1228800}],O=[xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_0__13274_fix:(1,80,80,24), fixpos=3 # of elements= 153600},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_1__13293_fix:(1,40,40,24), fixpos=3 # of elements= 38400},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_2__13312_fix:(1,20,20,24), fixpos=3 # of elements= 9600}]]
+
+
+ 2:   subgraph_DetectMultiBackend__DetectMultiBackend_DetectionModel_model__C3_model__C3_13__Conv_cv1__Conv2d_conv__input_189 [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{DetectMultiBackend__input_0_fix:(1,416,416,3), fixpos=6 # of elements= 519168}],O=[xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_0__13274_fix:(1,52,52,24), fixpos=2 # of elements= 64896},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_1__13293_fix:(1,26,26,24), fixpos=2 # of elements= 16224},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_2__13312_fix:(1,13,13,24), fixpos=2 # of elements= 4056}]]
+
+  1/:  subgraph_DetectMultiBackend__DetectMultiBackend_DetectionModel_model__C3_model__C3_13__Conv_cv1__Conv2d_conv__input_189 [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{DetectMultiBackend__input_0_fix:(1,640,640,3), fixpos=6 # of elements= 1228800}],O=[xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_0__13274_fix:(1,80,80,24), fixpos=2 # of elements= 153600},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_1__13293_fix:(1,40,40,24), fixpos=2 # of elements= 38400},xir_tensor{DetectMultiBackend__DetectMultiBackend_DetectionModel_model__Detect_model__Detect_24__Conv2d_m__ModuleList_2__13312_fix:(1,20,20,24), fixpos=2 # of elements= 9600}]]
+
+
+xir subgraph runs/train/yolov4_leaky_512_tf/yolov4_leaky_512_tf.xmodel | grep DPU
+
+    subgraph_add/add [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096,I=[xir_tensor{image_input/aquant:(1,512,512,3), fixpos=6 # of elements= 786432}],O=[xir_tensor{conv2d_93/BiasAdd/aquant:(1,64,64,255), fixpos=2 # of elements= 1044480},xir_tensor{conv2d_101/BiasAdd/aquant:(1,32,32,255), fixpos=2 # of elements= 261120},xir_tensor{conv2d_109/BiasAdd/aquant:(1,16,16,255), fixpos=2 # of elements= 65280}]]
+
+model {
+  kernel {
+     mean: 0.0
+     mean: 0.0
+     mean: 0.0
+     scale: 0.00390625
+     scale: 0.00390625
+     scale: 0.00390625
+  }
+  model_type : YOLOv3
+  yolo_v3_param {
+    num_classes: 80
+    anchorCnt: 3
+    layer_name: "109"
+    layer_name: "101"
+    layer_name: "93"
+    conf_threshold: 0.3
+    nms_threshold: 0.6
+    biases: 12 
+    biases: 16 
+    biases: 19
+    biases: 36
+    biases: 40
+    biases: 28
+    biases: 36
+    biases: 75
+    biases: 76
+    biases: 55
+    biases: 72
+    biases: 146
+    biases: 142
+    biases: 110
+    biases: 192
+    biases: 243
+    biases: 459
+    biases: 401
+    test_mAP: false
+  }
+}
+
+
+xir subgraph runs/train/yolov5s6_pt/yolov5s6_pt.xmodel | grep DPU
+
+    subgraph_Model__Model_C3_model__C3_10__Cat_cat__input_104 [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096,I=[xir_tensor{Model__Model_QuantStub_quant__input_1_fix:(1,1280,1280,3), fixpos=6 # of elements= 4915200}],O=[xir_tensor{Model__Model_Detect_model__Detect_33__Conv2d_m__ModuleList_0__ip_1_fix:(1,160,160,255), fixpos=3 # of elements= 6528000},xir_tensor{Model__Model_Detect_model__Detect_33__Conv2d_m__ModuleList_1__ip_2_fix:(1,80,80,255), fixpos=3 # of elements= 1632000},xir_tensor{Model__Model_Detect_model__Detect_33__Conv2d_m__ModuleList_2__ip_3_fix:(1,40,40,255), fixpos=4 # of elements= 408000},xir_tensor{Model__Model_Detect_model__Detect_33__Conv2d_m__ModuleList_3__ip_fix:(1,20,20,255), fixpos=4 # of elements= 102000}]]
+
+model {
+  kernel {
+     mean: 0.0
+     mean: 0.0
+     mean: 0.0
+     scale: 0.00392156
+     scale: 0.00392156
+     scale: 0.00392156
+  }
+  model_type : YOLOv3
+  yolo_v3_param {
+    num_classes: 80
+    anchorCnt: 3
+    layer_name: "ip_fix"
+    layer_name: "ip_3_fix"
+    layer_name: "ip_2_fix"
+    layer_name: "ip_1_fix"
+    conf_threshold: 0.5
+    nms_threshold: 0.65
+    biases: 19
+    biases: 27
+    biases: 44 
+    biases: 40
+    biases: 38 
+    biases: 94
+    biases: 96
+    biases: 68
+    biases: 86
+    biases: 152
+    biases: 180 
+    biases: 137
+    biases: 140
+    biases: 301
+    biases: 303
+    biases: 264
+    biases: 232 
+    biases: 542
+    biases: 436
+    biases: 615
+    biases: 739 
+    biases: 380
+    biases: 925
+    biases: 792
+    test_mAP: false 
+    type: YOLOV5
+  }
+  is_tf: true 
+}
+
+xir subgraph runs/train/yolov5_large_pt/yolov5_large_pt.xmodel | grep DPU
+
+    subgraph_Model__Model_C3_model__C3_13__Cat_cat__input_207 [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096,I=[xir_tensor{Model__Model_QuantStub_quant__input_1_fix:(1,640,640,3), fixpos=6 # of elements= 1228800}],O=[xir_tensor{Model__Model_Detect_model__Detect_24__Conv2d_m__ModuleList_0__ip_1_fix:(1,80,80,255), fixpos=3 # of elements= 1632000},xir_tensor{Model__Model_Detect_model__Detect_24__Conv2d_m__ModuleList_1__ip_2_fix:(1,40,40,255), fixpos=4 # of elements= 408000},xir_tensor{Model__Model_Detect_model__Detect_24__Conv2d_m__ModuleList_2__ip_fix:(1,20,20,255), fixpos=4 # of elements= 102000}]]
+
+kernel {
+     mean: 0.0   # change your own mean value here.
+     mean: 0.0
+     mean: 0.0
+     scale: 0.00392156   # change your own scale value here.
+     scale: 0.00392156
+     scale: 0.00392156
+  }
+  model_type : YOLOv3
+  yolo_v3_param {
+    num_classes: 80   # change your own classes number 
+    anchorCnt: 3     
+    layer_name: "271_fix"   # your model's output layer name , that must be different than this one.
+    layer_name: "270_fix"
+    layer_name: "269_fix"
+    conf_threshold: 0.5
+    nms_threshold: 0.65
+    biases: 10
+    biases: 13
+    biases: 16
+    biases: 30
+    biases: 33
+    biases: 23
+    biases: 30
+    biases: 61
+    biases: 62
+    biases: 45
+    biases: 59
+    biases: 119
+    biases: 116
+    biases: 90
+    biases: 156
+    biases: 198
+    biases: 373
+    biases: 326
+    test_mAP: true
+    type: YOLOV5
+  }
+  is_tf: true
+  
+Example:
+model {
+  kernel {
+     mean: 0.0
+     mean: 0.0
+     mean: 0.0
+     scale: 0.00392156
+     scale: 0.00392156
+     scale: 0.00392156
+  }
+  model_type : YOLOv3
+  yolo_v3_param {
+    num_classes: 80
+    anchorCnt: 3
+    layer_name: "ip_fix"
+    layer_name: "ip_2_fix"
+    layer_name: "ip_1_fix"
+    conf_threshold: 0.5
+    nms_threshold: 0.65
+    biases: 10
+    biases: 13
+    biases: 16
+    biases: 30
+    biases: 33 
+    biases: 23
+    biases: 30
+    biases: 61
+    biases: 62
+    biases: 45 
+    biases: 59
+    biases: 119
+    biases: 116
+    biases: 90
+    biases: 156
+    biases: 198
+    biases: 373 
+    biases: 326
+    test_mAP: false
+    type: YOLOV5
+  }
+  is_tf: true 
+}
+
+
+
+

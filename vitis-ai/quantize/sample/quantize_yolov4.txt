@@ -1,0 +1,202 @@
+# yolov3 --------------------------------------------------------------------
+Run docker: in Vitis-AI folder
+./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+chon moi truong:
+conda activate vitis-ai-tensorflow
+
+Darknet to Keras: weight, cfg -> h5 //chu y vi tri tep
+python quantize/sample/keras-YOLOv3-model-set/tools/model_converter/convert.py quantize/yolov3-facemask-v2/training/yolov3-facemask-v2.cfg quantize/yolov3-facemask-v2/training/yolov3-facemask-v2_best.weights quantize/yolov3-facemask-v2/training/yolov3-facemask-v2_keras.h5
+
+Keras to TF: h5 -> pb (them thu muc)(doi tedatan file)
+python quantize/sample/keras-YOLOv3-model-set/tools/model_converter/keras_to_tensorflow.py --input_model quantize/yolov3-facemask-v2/training/yolov3-facemask-v2_keras.h5 --output_model quantize/yolov3-facemask-v2/training/yolov3-facemask-v2_frozen.pb
+
+
+Chuan bi anh calib: trong data de thuc thi fpga (chinh sua file nay nhe)
+python generate_img.py
+
+
+Quantize: (sua input_shape,inter,tenfile trong calib.py) (sua input node output node tren netron) (sua input shapes theo file .cfg) (sua ten cac folder va file model)
+vai_q_tensorflow quantize --input_frozen_graph quantize/yolov3-facemask-v2/training/yolov3-facemask-v2_frozen.pb --input_fn quantize.sample.yolo_graph_input_keras_fn.calib_input --output_dir quantize/yolov3-facemask-v2/quantized --input_nodes image_input --output_nodes conv2d_58/BiasAdd,conv2d_66/BiasAdd,conv2d_74/BiasAdd --input_shapes ?,416,416,3 --calib_iter 40
+
+Tao file arch2.json:
+cd /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104
+sudo cp -v arch.json arch2.json
+sudo vim arch2.json
+i
+{ "fingerprint": "0x101000056010407" }
+esc
+:w
+:q
+cat arch2.json
+cd /workspace
+
+Compile:(sua ten model) (sua input_shape trong duong dan)
+vai_c_tensorflow --frozen_pb quantize/yolov3-facemask-v2/quantized/quantize_eval_model.pb --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104/arch2.json --output_dir quantize/yolov3-facemask-v2/compiled --net_name dpu_yolov3_facemask --options "{'mode':'normal','save_kernel':'', 'input_shape':'1,416,416,3'}"
+
+xuat file procotxt:
+xir subgraph quantize/yolov3-facemask-v2/compiled/dpu_yolov3_facemask.xmodel | grep DPU
+
+    subgraph_add/add [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{image_input/aquant:(1,416,416,3), fixpos=6 # of elements= 519168}],O=[xir_tensor{conv2d_58/BiasAdd/aquant:(1,13,13,24), fixpos=2 # of elements= 4056},xir_tensor{conv2d_66/BiasAdd/aquant:(1,26,26,24), fixpos=2 # of elements= 16224},xir_tensor{conv2d_74/BiasAdd/aquant:(1,52,52,24), fixpos=2 # of elements= 64896}]]
+
+# yolov4 --------------------------------------------------------------------
+Run docker: in Vitis-AI folder
+./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+chon moi truong:
+conda activate vitis-ai-tensorflow
+
+Darknet to Keras: weight, cfg -> h5 //chu y vi tri tep
+python quantize/sample/keras-YOLOv3-model-set/tools/model_converter/convert.py quantize/yolov4-facemask-v2/training/yolov4-facemask-v2.cfg quantize/yolov4-facemask-v2/training/yolov4-facemask-v2_best.weights quantize/yolov4-facemask-v2/training/yolov4-facemask-v2_keras.h5
+
+Keras to TF: h5 -> pb (them thu muc)(doi tedatan file)
+python quantize/sample/keras-YOLOv3-model-set/tools/model_converter/keras_to_tensorflow.py --input_model quantize/yolov4-facemask-v2/training/yolov4-facemask-v2_keras.h5 --output_model quantize/yolov4-facemask-v2/training/yolov4-facemask-v2_frozen.pb
+
+
+Chuan bi anh calib: trong data de thuc thi fpga (chinh sua file nay nhe)
+python generate_img.py
+
+
+Quantize: (sua input_shape,inter,tenfile trong calib.py) (sua input node output node tren netron) (sua input shapes theo file .cfg) (sua ten cac folder va file model)
+vai_q_tensorflow quantize --input_frozen_graph quantize/yolov4-facemask-v2/training/yolov4-facemask-v2_frozen.pb --input_fn quantize.sample.yolo_graph_input_keras_fn.calib_input --output_dir quantize/yolov4-facemask-v2/quantized --input_nodes image_input --output_nodes conv2d_93/BiasAdd,conv2d_101/BiasAdd,conv2d_109/BiasAdd --input_shapes ?,416,416,3 --calib_iter 40
+
+Tao file arch2.json:
+cd /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104
+sudo cp -v arch.json arch2.json
+sudo vim arch2.json
+i
+{ "fingerprint": "0x101000056010407" }
+esc
+:w
+:q
+cat arch2.json
+cd /workspace
+
+Compile:(sua ten model) (sua input_shape trong duong dan)
+vai_c_tensorflow --frozen_pb quantize/yolov4-facemask-v2/quantized/quantize_eval_model.pb --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104/arch2.json --output_dir quantize/yolov4-facemask-v2/compiled --net_name dpu_yolov4_facemask --options "{'mode':'normal','save_kernel':'', 'input_shape':'1,416,416,3'}"
+
+xuat file procotxt:
+xir subgraph quantize/yolov4-facemask-v2/compiled/dpu_yolov4_facemask.xmodel | grep DPU
+
+    subgraph_add/add [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{image_input/aquant:(1,416,416,3), fixpos=6 # of elements= 519168}],O=[xir_tensor{conv2d_93/BiasAdd/aquant:(1,52,52,24), fixpos=2 # of elements= 64896},xir_tensor{conv2d_101/BiasAdd/aquant:(1,26,26,24), fixpos=2 # of elements= 16224},xir_tensor{conv2d_109/BiasAdd/aquant:(1,13,13,24), fixpos=2 # of elements= 4056}]]
+
+# yolov3-tiny --------------------------------------------------------------------
+Run docker: in Vitis-AI folder
+./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+chon moi truong:
+conda activate vitis-ai-tensorflow
+
+Darknet to Keras: weight, cfg -> h5 //chu y vi tri tep
+python quantize/sample/keras-YOLOv3-model-set/tools/model_converter/convert.py quantize/yolov3-tiny_3l-facemask/training/yolov3-tiny_3l-facemask.cfg quantize/yolov3-tiny_3l-facemask/training/yolov3-tiny_3l-facemask_best.weights quantize/yolov3-tiny_3l-facemask/training/yolov3-tiny_3l-facemask_keras.h5
+
+Keras to TF: h5 -> pb (them thu muc)(doi tedatan file)
+python quantize/sample/keras-YOLOv3-model-set/tools/model_converter/keras_to_tensorflow.py --input_model quantize/yolov3-tiny_3l-facemask/training/yolov3-tiny_3l-facemask_keras.h5 --output_model quantize/yolov3-tiny_3l-facemask/training/yolov3-tiny_3l-facemask_frozen.pb
+
+
+Chuan bi anh calib: trong data de thuc thi fpga (chinh sua file nay nhe)
+python generate_img.py
+
+
+Quantize: (sua input_shape,inter,tenfile trong calib.py) (sua input node output node tren netron) (sua input shapes theo file .cfg) (sua ten cac folder va file model)
+vai_q_tensorflow quantize --input_frozen_graph quantize/yolov3-tiny_3l-facemask/training/yolov3-tiny_3l-facemask_frozen.pb --input_fn quantize.sample.yolo_graph_input_keras_fn.calib_input --output_dir quantize/yolov3-tiny_3l-facemask/quantized --input_nodes image_input --output_nodes conv2d_9/BiasAdd,conv2d_12/BiasAdd,conv2d_15/BiasAdd --input_shapes ?,416,416,3 --calib_iter 40
+
+Tao file arch2.json:
+cd /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104
+sudo cp -v arch.json arch2.json
+sudo vim arch2.json
+i
+{ "fingerprint": "0x101000056010407" }
+esc
+:w
+:q
+cat arch2.json
+cd /workspace
+
+Compile:(sua ten model) (sua input_shape trong duong dan)
+vai_c_tensorflow --frozen_pb quantize/yolov3-tiny_3l-facemask/quantized/quantize_eval_model.pb --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104/arch2.json --output_dir quantize/yolov3-tiny_3l-facemask/compiled --net_name dpu_yolov3-tiny_facemask --options "{'mode':'normal','save_kernel':'', 'input_shape':'1,416,416,3'}"
+
+xuat file procotxt:
+xir subgraph quantize/yolov3-tiny_3l-facemask/compiled/dpu_yolov3-tiny_facemask.xmodel | grep DPU
+
+    subgraph_concatenate/concat [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{image_input/aquant:(1,416,416,3), fixpos=6 # of elements= 519168}],O=[xir_tensor{conv2d_9/BiasAdd/aquant:(1,13,13,24), fixpos=2 # of elements= 4056},xir_tensor{conv2d_12/BiasAdd/aquant:(1,26,26,24), fixpos=2 # of elements= 16224},xir_tensor{conv2d_15/BiasAdd/aquant:(1,52,52,24), fixpos=2 # of elements= 64896}]]
+
+# yolov4-tiny --------------------------------------------------------------------
+Run docker: in Vitis-AI folder
+./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+chon moi truong:
+conda activate vitis-ai-tensorflow
+
+Darknet to Keras: weight, cfg -> h5 //chu y vi tri tep
+python quantize/sample/keras-YOLOv3-model-set/tools/model_converter/convert.py quantize/yolov4-tiny_3l-facemask/training/yolov4-tiny_3l-facemask.cfg quantize/yolov4-tiny_3l-facemask/training/yolov4-tiny_3l-facemask_best.weights quantize/yolov4-tiny_3l-facemask/training/yolov4-tiny_3l-facemask_keras.h5
+
+Keras to TF: h5 -> pb (them thu muc)(doi tedatan file)
+python quantize/sample/keras-YOLOv3-model-set/tools/model_converter/keras_to_tensorflow.py --input_model quantize/yolov4-tiny_3l-facemask/training/yolov4-tiny_3l-facemask_keras.h5 --output_model quantize/yolov4-tiny_3l-facemask/training/yolov4-tiny_3l-facemask_frozen.pb
+
+
+Chuan bi anh calib: trong data de thuc thi fpga (chinh sua file nay nhe)
+python generate_img.py
+
+
+Quantize: (sua input_shape,inter,tenfile trong calib.py) (sua input node output node tren netron) (sua input shapes theo file .cfg) (sua ten cac folder va file model)
+vai_q_tensorflow quantize --input_frozen_graph quantize/yolov4-tiny_3l-facemask/training/yolov4-tiny_3l-facemask_frozen.pb --input_fn quantize.sample.yolo_graph_input_keras_fn.calib_input --output_dir quantize/yolov4-tiny_3l-facemask/quantized --input_nodes image_input --output_nodes conv2d_17/BiasAdd,conv2d_20/BiasAdd,conv2d_23/BiasAdd --input_shapes ?,416,416,3 --calib_iter 40
+
+Tao file arch2.json:
+cd /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104
+sudo cp -v arch.json arch2.json
+sudo vim arch2.json
+i
+{ "fingerprint": "0x101000056010407" }
+esc
+:w
+:q
+cat arch2.json
+cd /workspace
+
+Compile:(sua ten model) (sua input_shape trong duong dan)
+vai_c_tensorflow --frozen_pb quantize/yolov4-tiny_3l-facemask/quantized/quantize_eval_model.pb --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104/arch2.json --output_dir quantize/yolov4-tiny_3l-facemask/compiled --net_name dpu_yolov4-tiny_facemask --options "{'mode':'normal','save_kernel':'', 'input_shape':'1,416,416,3'}"
+
+xuat file procotxt:
+xir subgraph quantize/yolov4-tiny_3l-facemask/compiled/dpu_yolov4-tiny_facemask.xmodel | grep DPU
+
+(vitis-ai-tensorflow) Vitis-AI /workspace > xir subgraph quantize/yolov4-tiny_3l-facemask/compiled/dpu_yolov4-tiny_facemask.xmodel | grep DPU
+    subgraph_concatenate/concat [device=DPU,fingerprint=0x101000056010407,DPU=DPUCZDX8G_ISA1_B4096_0101000056010407,I=[xir_tensor{image_input/aquant:(1,416,416,3), fixpos=6 # of elements= 519168}],O=[xir_tensor{conv2d_17/BiasAdd/aquant:(1,13,13,24), fixpos=2 # of elements= 4056},xir_tensor{conv2d_20/BiasAdd/aquant:(1,26,26,24), fixpos=2 # of elements= 16224},xir_tensor{conv2d_23/BiasAdd/aquant:(1,52,52,24), fixpos=2 # of elements= 64896}]]
+
+#-----------------------------------------------------------------------
+Run docker: in Vitis-AI folder
+./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+chon moi truong:
+conda activate vitis-ai-tensorflow
+
+Darknet to Keras: weight, cfg -> h5 //chu y vi tri tep
+python yolo/keras-YOLOv3-model-set/tools/model_converter/convert.py yolo/yolov4_v0/training/yolov4.cfg yolo/yolov4_v0/training/yolov4_best.weights yolo/yolov4_v0/training/yolov4_keras.h5
+
+Keras to TF: h5 -> pb (them thu muc)(doi tedatan file)
+python yolo/keras-YOLOv3-model-set/tools/model_converter/keras_to_tensorflow.py --input_model yolo/yolov4_v0/training/yolov4_keras.h5 --output_model yolo/yolov4_v0/training/yolov4_frozen.pb
+
+
+Chuan bi anh calib: trong data de thuc thi fpga (chinh sua file nay nhe)
+python generate_img.py
+
+
+Quantize: (sua input_shape,inter,tenfile trong calib.py) (sua input node output node tren netron) (sua input shapes theo file .cfg) (sua ten cac folder va file model)
+vai_q_tensorflow quantize --input_frozen_graph yolo/yolov4_v0/training/yolov4_frozen.pb --input_fn yolo.yolo_graph_input_keras_fn.calib_input --output_dir yolo/yolov4_v0/quantized --input_nodes image_input --output_nodes conv2d_93/BiasAdd,conv2d_101/BiasAdd,conv2d_109/BiasAdd --input_shapes ?,640,480,3 --calib_iter 20
+
+Tao file arch2.json:
+cd /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104
+sudo cp -v arch.json arch2.json
+sudo vim arch2.json
+i
+{ "fingerprint": "0x101000056010407" }
+esc
+:w
+:q
+cat arch2.json
+cd /workspace
+
+Compile:(sua ten model) (sua input_shape trong duong dan)
+vai_c_tensorflow --frozen_pb yolo/yolov4_v0/quantized/quantize_eval_model.pb --arch /opt/vitis_ai/compiler/arch/DPUCZDX8G/ZCU104/arch2.json --output_dir yolo/yolov4_v0/compiled --net_name dpu_yolov4_facemask --options "{'mode':'normal','save_kernel':'', 'input_shape':'1,640,480,3'}"
+
+#----------------------------------------------------------------------------------------
