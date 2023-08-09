@@ -1,0 +1,3 @@
+classes = 3
+valid  = data/list_filename.txt
+names = data/obj.names

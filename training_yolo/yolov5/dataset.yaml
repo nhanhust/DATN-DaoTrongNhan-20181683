@@ -1,0 +1,5 @@
+train: ../yolov5/data/YOLODataset/images/train/
+val: ../yolov5/data/YOLODataset/images/val/
+test: ../yolov5/data/YOLODataset/images/test/
+nc: 3
+names: ['nomask', 'mask', 'incorrect']
