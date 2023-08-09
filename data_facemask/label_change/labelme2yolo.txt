@@ -1,0 +1,6 @@
+
+labelme2yolo --json_dir /home/nhan/Downloads/data_facemask/old_data/5K_Zalo --val_size 0.1 --test_size 0.1 --output_format bbox --label_list nomask mask incorrect
+
+labelme2yolo --json_dir /home/nhan/Downloads/data_facemask/old_data/Face_mask --val_size 0.1 --test_size 0.1 --output_format bbox --label_list nomask mask incorrect
+
+labelme2yolo --json_dir /home/nhan/Downloads/data_facemask/old_data/FPT_maskdata --val_size 0.1 --test_size 0.1 --output_format bbox --label_list nomask mask incorrect
