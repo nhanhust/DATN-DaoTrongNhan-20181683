@@ -1,0 +1,36 @@
+eval:
+
+Run docker: in Vitis-AI folder
+./docker_run.sh xilinx/vitis-ai-cpu:latest
+
+python  scripts/evaluation.py -mode detection -detection_use_07_metric True  -gt_file voc/2007_test_gt.txt -result_file voc/caffe_result_fp.txt -detection_iou 0.5 -detection_thresh 0.005; 
+
+python  scripts/evaluation.py -gt_file scripts/yolov4/labels_anchors.txt -result_file scripts/yolov4/yolov4_eval_result.txt -detection_iou 0.5 -detection_thresh 0.005; 
+
+python  scripts/eval.py --gt_file scripts/yolov4/labels_anchors.txt --results_file scripts/yolov4/yolov4_eval_result.txt --iou_thresh 0.25 --detection_thresh 0.005; 
+
+cd evaluation
+./scripts/eval_run.sh
+
+python  scripts/evaluation.py -detection_metric pr -gt_file labels_anchors.txt -result_file labels_anchors_result_3.txt -detection_iou 0.5 -detection_thresh 0.005 
+
+
+python  scripts/evaluation.py -detection_metric pr -gt_file labels_anchors.txt -result_file labels_anchors_result_3t.txt -detection_iou 0.5 -detection_thresh 0.005
+
+
+python  scripts/evaluation.py -detection_metric pr -gt_file labels_anchors.txt -result_file labels_anchors_result_4.txt -detection_iou 0.5 -detection_thresh 0.005
+
+
+python  scripts/evaluation.py -detection_metric pr -gt_file labels_anchors.txt -result_file labels_anchors_result_4t.txt -detection_iou 0.5 -detection_thresh 0.005
+
+
+python  scripts/evaluation.py -detection_metric pr -gt_file labels_anchors.txt -result_file labels_anchors_result_5m.txt -detection_iou 0.5 -detection_thresh 0.005
+
+
+python  scripts/evaluation.py -detection_metric pr -gt_file labels_anchors.txt -result_file labels_anchors_result_5s.txt -detection_iou 0.5 -detection_thresh 0.3
+
+
+python  scripts/evaluation.py -detection_metric pr -gt_file labels_anchors.txt -result_file labels_anchors_result_5n.txt -detection_iou 0.5 -detection_thresh 0.005
+
+
+python  scripts/evaluation.py -detection_metric pr -gt_file labels_anchors.txt -result_file labels_anchors_result_5s.txt -detection_iou 0.5 -detection_thresh 0.3

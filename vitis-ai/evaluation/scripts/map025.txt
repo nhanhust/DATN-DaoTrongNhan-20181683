@@ -1,0 +1,1273 @@
+) Vitis-AI /workspace/evaluation > ./scripts/eval_run.sh
+yolov3
+evaluate 1010 images
+mask AP: 0.596895337247518
+nomask AP: 0.3829026277393587
+incorrect AP: 0.4788188805917327
+mAP: 0.4862056151928698
+mask
+TP: 1169.0
+FP: 81.0
+FN: 735.0
+nomask
+TP: 330.0
+FP: 74.0
+FN: 466.0
+incorrect
+TP: 115.0
+FP: 5.0
+FN: 123.0
+evaluate 1010 images
+mask, set confidence score is 0.3, precision: 0.9389558232931727, recall: 0.6139705882352942
+nomask, set confidence score is 0.3, precision: 0.8188585607940446, recall: 0.41457286432160806
+incorrect, set confidence score is 0.3, precision: 0.9663865546218487, recall: 0.4831932773109244
+dpu_yolov3_facemask_acc_0.3_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.6208489310296301
+nomask AP: 0.4072833606384931
+incorrect AP: 0.49494791284979717
+mAP: 0.5076934015059734
+mask
+TP: 1218.0
+FP: 101.0
+FN: 686.0
+nomask
+TP: 354.0
+FP: 91.0
+FN: 442.0
+incorrect
+TP: 119.0
+FP: 5.0
+FN: 119.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.9241274658573596, recall: 0.6397058823529411
+nomask, set confidence score is 0.25, precision: 0.7955056179775281, recall: 0.44472361809045224
+incorrect, set confidence score is 0.25, precision: 0.9596774193548387, recall: 0.5
+dpu_yolov3_facemask_acc_0.25_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.644936148367993
+nomask AP: 0.427887832153653
+incorrect AP: 0.5070727018052573
+mAP: 0.5266322274423011
+mask
+TP: 1268.0
+FP: 124.0
+FN: 636.0
+nomask
+TP: 375.0
+FP: 120.0
+FN: 421.0
+incorrect
+TP: 122.0
+FP: 5.0
+FN: 116.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.9109195402298851, recall: 0.6659663865546218
+nomask, set confidence score is 0.2, precision: 0.7575757575757576, recall: 0.47110552763819097
+incorrect, set confidence score is 0.2, precision: 0.9606299212598425, recall: 0.5126050420168067
+dpu_yolov3_facemask_acc_0.2_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.6668198294664573
+nomask AP: 0.46023650401501115
+incorrect AP: 0.5150561188539515
+mAP: 0.54737081744514
+mask
+TP: 1314.0
+FP: 151.0
+FN: 590.0
+nomask
+TP: 409.0
+FP: 145.0
+FN: 387.0
+incorrect
+TP: 124.0
+FP: 10.0
+FN: 114.0
+evaluate 1010 images
+mask, set confidence score is 0.15, precision: 0.8969283276450511, recall: 0.6901260504201681
+nomask, set confidence score is 0.15, precision: 0.7409420289855072, recall: 0.5138190954773869
+incorrect, set confidence score is 0.15, precision: 0.9465648854961832, recall: 0.5210084033613446
+dpu_yolov3_facemask_acc_0.15_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.7000326633624934
+nomask AP: 0.48680163736300086
+incorrect AP: 0.5343180902292324
+mAP: 0.5737174636515755
+mask
+TP: 1385.0
+FP: 198.0
+FN: 519.0
+nomask
+TP: 438.0
+FP: 187.0
+FN: 358.0
+incorrect
+TP: 129.0
+FP: 15.0
+FN: 109.0
+evaluate 1010 images
+mask, set confidence score is 0.1, precision: 0.8760278304870335, recall: 0.7274159663865546
+nomask, set confidence score is 0.1, precision: 0.7064516129032258, recall: 0.550251256281407
+incorrect, set confidence score is 0.1, precision: 0.8958333333333334, recall: 0.542016806722689
+dpu_yolov3_facemask_acc_0.1_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.7325766548444145
+nomask AP: 0.5165481017575413
+incorrect AP: 0.578326666457028
+mAP: 0.6091504743529946
+mask
+TP: 1458.0
+FP: 317.0
+FN: 446.0
+nomask
+TP: 474.0
+FP: 306.0
+FN: 322.0
+incorrect
+TP: 141.0
+FP: 32.0
+FN: 97.0
+evaluate 1010 images
+mask, set confidence score is 0.05, precision: 0.8241944601469757, recall: 0.7657563025210085
+nomask, set confidence score is 0.05, precision: 0.6155844155844156, recall: 0.5954773869346733
+incorrect, set confidence score is 0.05, precision: 0.8294117647058824, recall: 0.592436974789916
+dpu_yolov3_facemask_acc_0.05_0.4.txt evaluated!
+3-2
+evaluate 1010 images
+mask AP: 0.620266235735331
+nomask AP: 0.4072746705516983
+incorrect AP: 0.4947850435274952
+mAP: 0.5074419832715081
+mask
+TP: 1218.0
+FP: 110.0
+FN: 686.0
+nomask
+TP: 354.0
+FP: 93.0
+FN: 442.0
+incorrect
+TP: 119.0
+FP: 6.0
+FN: 119.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.9171686746987951, recall: 0.6397058823529411
+nomask, set confidence score is 0.25, precision: 0.7919463087248322, recall: 0.44472361809045224
+incorrect, set confidence score is 0.25, precision: 0.952, recall: 0.5
+dpu_yolov3_facemask_acc_0.25_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.6208489310296301
+nomask AP: 0.4072833606384931
+incorrect AP: 0.49494791284979717
+mAP: 0.5076934015059734
+mask
+TP: 1218.0
+FP: 101.0
+FN: 686.0
+nomask
+TP: 354.0
+FP: 91.0
+FN: 442.0
+incorrect
+TP: 119.0
+FP: 5.0
+FN: 119.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.9241274658573596, recall: 0.6397058823529411
+nomask, set confidence score is 0.25, precision: 0.7955056179775281, recall: 0.44472361809045224
+incorrect, set confidence score is 0.25, precision: 0.9596774193548387, recall: 0.5
+dpu_yolov3_facemask_acc_0.25_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.6208489310296301
+nomask AP: 0.40735290490202647
+incorrect AP: 0.4954209819325882
+mAP: 0.5078742726214149
+mask
+TP: 1218.0
+FP: 101.0
+FN: 686.0
+nomask
+TP: 354.0
+FP: 90.0
+FN: 442.0
+incorrect
+TP: 119.0
+FP: 4.0
+FN: 119.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.9241274658573596, recall: 0.6397058823529411
+nomask, set confidence score is 0.25, precision: 0.7972972972972973, recall: 0.44472361809045224
+incorrect, set confidence score is 0.25, precision: 0.967479674796748, recall: 0.5
+dpu_yolov3_facemask_acc_0.25_0.35.txt evaluated!
+evaluate 1010 images
+mask AP: 0.6208489310296301
+nomask AP: 0.40735290490202647
+incorrect AP: 0.4954209819325882
+mAP: 0.5078742726214149
+mask
+TP: 1218.0
+FP: 101.0
+FN: 686.0
+nomask
+TP: 354.0
+FP: 90.0
+FN: 442.0
+incorrect
+TP: 119.0
+FP: 4.0
+FN: 119.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.9241274658573596, recall: 0.6397058823529411
+nomask, set confidence score is 0.25, precision: 0.7972972972972973, recall: 0.44472361809045224
+incorrect, set confidence score is 0.25, precision: 0.967479674796748, recall: 0.5
+dpu_yolov3_facemask_acc_0.25_0.3.txt evaluated!
+evaluate 1010 images
+mask AP: 0.6203432039104412
+nomask AP: 0.4074182962223005
+incorrect AP: 0.4954209819325882
+mAP: 0.5077274940217767
+mask
+TP: 1217.0
+FP: 101.0
+FN: 687.0
+nomask
+TP: 354.0
+FP: 89.0
+FN: 442.0
+incorrect
+TP: 119.0
+FP: 4.0
+FN: 119.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.9240698557327259, recall: 0.6391806722689075
+nomask, set confidence score is 0.25, precision: 0.7990970654627539, recall: 0.44472361809045224
+incorrect, set confidence score is 0.25, precision: 0.967479674796748, recall: 0.5
+dpu_yolov3_facemask_acc_0.25_0.25.txt evaluated!
+evaluate 1010 images
+mask AP: 0.6203432039104412
+nomask AP: 0.4074182962223005
+incorrect AP: 0.4954209819325882
+mAP: 0.5077274940217767
+mask
+TP: 1217.0
+FP: 101.0
+FN: 687.0
+nomask
+TP: 354.0
+FP: 89.0
+FN: 442.0
+incorrect
+TP: 119.0
+FP: 4.0
+FN: 119.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.9240698557327259, recall: 0.6391806722689075
+nomask, set confidence score is 0.25, precision: 0.7990970654627539, recall: 0.44472361809045224
+incorrect, set confidence score is 0.25, precision: 0.967479674796748, recall: 0.5
+dpu_yolov3_facemask_acc_0.25_0.2.txt evaluated!
+yolov4
+evaluate 1010 images
+mask AP: 0.8104606599560112
+nomask AP: 0.6231975565845248
+incorrect AP: 0.7570073704537479
+mAP: 0.7302218623314279
+mask
+TP: 1592.0
+FP: 209.0
+FN: 312.0
+nomask
+TP: 519.0
+FP: 104.0
+FN: 277.0
+incorrect
+TP: 185.0
+FP: 31.0
+FN: 53.0
+evaluate 1010 images
+mask, set confidence score is 0.3, precision: 0.883953359244864, recall: 0.8361344537815126
+nomask, set confidence score is 0.3, precision: 0.8344051446945338, recall: 0.6520100502512562
+incorrect, set confidence score is 0.3, precision: 0.8604651162790697, recall: 0.7773109243697479
+dpu_yolov4_facemask_acc_0.3_0.55.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8242748933932018
+nomask AP: 0.6469650483539321
+incorrect AP: 0.7605759211617023
+mAP: 0.743938620969612
+mask
+TP: 1622.0
+FP: 241.0
+FN: 282.0
+nomask
+TP: 542.0
+FP: 125.0
+FN: 254.0
+incorrect
+TP: 186.0
+FP: 33.0
+FN: 52.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8706387546967257, recall: 0.851890756302521
+nomask, set confidence score is 0.25, precision: 0.8162650602409639, recall: 0.6809045226130653
+incorrect, set confidence score is 0.25, precision: 0.8493150684931506, recall: 0.7815126050420168
+dpu_yolov4_facemask_acc_0.25_0.55.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8377951126191685
+nomask AP: 0.664982170423799
+incorrect AP: 0.7640547113029998
+mAP: 0.755610664781989
+mask
+TP: 1652.0
+FP: 292.0
+FN: 252.0
+nomask
+TP: 560.0
+FP: 156.0
+FN: 236.0
+incorrect
+TP: 187.0
+FP: 44.0
+FN: 51.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.851985559566787, recall: 0.8676470588235294
+nomask, set confidence score is 0.2, precision: 0.7832167832167832, recall: 0.7035175879396985
+incorrect, set confidence score is 0.2, precision: 0.8237885462555066, recall: 0.7857142857142857
+dpu_yolov4_facemask_acc_0.2_0.55.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8500765916960715
+nomask AP: 0.6811478094772776
+incorrect AP: 0.784203012511028
+mAP: 0.7718091378947923
+mask
+TP: 1680.0
+FP: 369.0
+FN: 224.0
+nomask
+TP: 577.0
+FP: 216.0
+FN: 219.0
+incorrect
+TP: 193.0
+FP: 50.0
+FN: 45.0
+evaluate 1010 images
+mask, set confidence score is 0.15, precision: 0.8203125, recall: 0.8823529411764706
+nomask, set confidence score is 0.15, precision: 0.7350318471337579, recall: 0.7248743718592965
+incorrect, set confidence score is 0.15, precision: 0.7942386831275721, recall: 0.8109243697478992
+dpu_yolov4_facemask_acc_0.15_0.55.txt evaluated!
+evaluate 1010 images
+mask AP: 0.86303982928842
+nomask AP: 0.69927096596844
+incorrect AP: 0.8060812038357295
+mAP: 0.7894639996975298
+mask
+TP: 1711.0
+FP: 579.0
+FN: 193.0
+nomask
+TP: 598.0
+FP: 329.0
+FN: 198.0
+incorrect
+TP: 200.0
+FP: 83.0
+FN: 38.0
+evaluate 1010 images
+mask, set confidence score is 0.1, precision: 0.750438596491228, recall: 0.8986344537815126
+nomask, set confidence score is 0.1, precision: 0.648590021691974, recall: 0.7512562814070352
+incorrect, set confidence score is 0.1, precision: 0.7142857142857143, recall: 0.8403361344537815
+dpu_yolov4_facemask_acc_0.1_0.55.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8777393504166294
+nomask AP: 0.7223898850504157
+incorrect AP: 0.8138265393439261
+mAP: 0.8046519249369904
+mask
+TP: 1751.0
+FP: 991.0
+FN: 153.0
+nomask
+TP: 630.0
+FP: 573.0
+FN: 166.0
+incorrect
+TP: 203.0
+FP: 152.0
+FN: 35.0
+evaluate 1010 images
+mask, set confidence score is 0.05, precision: 0.645410984150387, recall: 0.9196428571428571
+nomask, set confidence score is 0.05, precision: 0.5241264559068219, recall: 0.7914572864321608
+incorrect, set confidence score is 0.05, precision: 0.5734463276836158, recall: 0.8529411764705882
+dpu_yolov4_facemask_acc_0.05_0.55.txt evaluated!
+4-2
+evaluate 1010 images
+mask AP: 0.8222658507809467
+nomask AP: 0.6435609377672605
+incorrect AP: 0.7595367767180676
+mAP: 0.7417878550887583
+mask
+TP: 1622.0
+FP: 309.0
+FN: 282.0
+nomask
+TP: 542.0
+FP: 152.0
+FN: 254.0
+incorrect
+TP: 186.0
+FP: 41.0
+FN: 52.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8404145077720208, recall: 0.851890756302521
+nomask, set confidence score is 0.25, precision: 0.7877906976744186, recall: 0.6809045226130653
+incorrect, set confidence score is 0.25, precision: 0.8303571428571429, recall: 0.7815126050420168
+dpu_yolov4_facemask_acc_0.25_0.6.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8242748933932018
+nomask AP: 0.6469650483539321
+incorrect AP: 0.7605759211617023
+mAP: 0.743938620969612
+mask
+TP: 1622.0
+FP: 241.0
+FN: 282.0
+nomask
+TP: 542.0
+FP: 125.0
+FN: 254.0
+incorrect
+TP: 186.0
+FP: 33.0
+FN: 52.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8706387546967257, recall: 0.851890756302521
+nomask, set confidence score is 0.25, precision: 0.8162650602409639, recall: 0.6809045226130653
+incorrect, set confidence score is 0.25, precision: 0.8493150684931506, recall: 0.7815126050420168
+dpu_yolov4_facemask_acc_0.25_0.55.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8256319211307318
+nomask AP: 0.6473034507639217
+incorrect AP: 0.7617786640720076
+mAP: 0.7449046786555537
+mask
+TP: 1622.0
+FP: 208.0
+FN: 282.0
+nomask
+TP: 542.0
+FP: 118.0
+FN: 254.0
+incorrect
+TP: 186.0
+FP: 29.0
+FN: 52.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8868234007654456, recall: 0.851890756302521
+nomask, set confidence score is 0.25, precision: 0.8237082066869301, recall: 0.6809045226130653
+incorrect, set confidence score is 0.25, precision: 0.8651162790697674, recall: 0.7815126050420168
+dpu_yolov4_facemask_acc_0.25_0.5.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8256780462325002
+nomask AP: 0.6474540374888661
+incorrect AP: 0.7618131923459674
+mAP: 0.7449817586891113
+mask
+TP: 1622.0
+FP: 202.0
+FN: 282.0
+nomask
+TP: 542.0
+FP: 114.0
+FN: 254.0
+incorrect
+TP: 186.0
+FP: 28.0
+FN: 52.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8897421832144816, recall: 0.851890756302521
+nomask, set confidence score is 0.25, precision: 0.8300153139356815, recall: 0.6809045226130653
+incorrect, set confidence score is 0.25, precision: 0.8691588785046729, recall: 0.7815126050420168
+dpu_yolov4_facemask_acc_0.25_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8257436352790666
+nomask AP: 0.6474540374888661
+incorrect AP: 0.7618503676433497
+mAP: 0.7450160134704275
+mask
+TP: 1622.0
+FP: 198.0
+FN: 282.0
+nomask
+TP: 542.0
+FP: 114.0
+FN: 254.0
+incorrect
+TP: 186.0
+FP: 27.0
+FN: 52.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8912087912087913, recall: 0.851890756302521
+nomask, set confidence score is 0.25, precision: 0.8300153139356815, recall: 0.6809045226130653
+incorrect, set confidence score is 0.25, precision: 0.8732394366197183, recall: 0.7815126050420168
+dpu_yolov4_facemask_acc_0.25_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8257436352790666
+nomask AP: 0.6474540374888661
+incorrect AP: 0.7618503676433497
+mAP: 0.7450160134704275
+mask
+TP: 1622.0
+FP: 198.0
+FN: 282.0
+nomask
+TP: 542.0
+FP: 114.0
+FN: 254.0
+incorrect
+TP: 186.0
+FP: 27.0
+FN: 52.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8912087912087913, recall: 0.851890756302521
+nomask, set confidence score is 0.25, precision: 0.8300153139356815, recall: 0.6809045226130653
+incorrect, set confidence score is 0.25, precision: 0.8732394366197183, recall: 0.7815126050420168
+dpu_yolov4_facemask_acc_0.25_0.35.txt evaluated!
+yolov5m
+evaluate 1010 images
+mask AP: 0.8169056122015205
+nomask AP: 0.620505538262025
+incorrect AP: 0.7890312025378097
+mAP: 0.7421474510004518
+mask
+TP: 1607.0
+FP: 152.0
+FN: 297.0
+nomask
+TP: 511.0
+FP: 95.0
+FN: 285.0
+incorrect
+TP: 191.0
+FP: 20.0
+FN: 47.0
+evaluate 1010 images
+mask, set confidence score is 0.5, precision: 0.9146272054638589, recall: 0.8440126050420168
+nomask, set confidence score is 0.5, precision: 0.8460264900662252, recall: 0.6419597989949749
+incorrect, set confidence score is 0.5, precision: 0.9227053140096618, recall: 0.8025210084033614
+dpu_yolov5m_facemask_acc_0.5_0.6.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8358759955464516
+nomask AP: 0.640333859031214
+incorrect AP: 0.8003307388959586
+mAP: 0.7588468644912081
+mask
+TP: 1647.0
+FP: 184.0
+FN: 257.0
+nomask
+TP: 530.0
+FP: 115.0
+FN: 266.0
+incorrect
+TP: 194.0
+FP: 23.0
+FN: 44.0
+evaluate 1010 images
+mask, set confidence score is 0.45, precision: 0.8995084653194976, recall: 0.8650210084033614
+nomask, set confidence score is 0.45, precision: 0.8229813664596274, recall: 0.6658291457286433
+incorrect, set confidence score is 0.45, precision: 0.8940092165898618, recall: 0.8151260504201681
+dpu_yolov5m_facemask_acc_0.45_0.6.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8485560129778551
+nomask AP: 0.6557197082820028
+incorrect AP: 0.8041364975760726
+mAP: 0.7694707396119768
+mask
+TP: 1674.0
+FP: 216.0
+FN: 230.0
+nomask
+TP: 545.0
+FP: 131.0
+FN: 251.0
+incorrect
+TP: 195.0
+FP: 25.0
+FN: 43.0
+evaluate 1010 images
+mask, set confidence score is 0.4, precision: 0.8880636604774536, recall: 0.8792016806722689
+nomask, set confidence score is 0.4, precision: 0.8074074074074075, recall: 0.6846733668341709
+incorrect, set confidence score is 0.4, precision: 0.8904109589041096, recall: 0.819327731092437
+dpu_yolov5m_facemask_acc_0.4_0.6.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8569843996681628
+nomask AP: 0.6707839234620552
+incorrect AP: 0.8040111875424598
+mAP: 0.7772598368908925
+mask
+TP: 1692.0
+FP: 253.0
+FN: 212.0
+nomask
+TP: 560.0
+FP: 151.0
+FN: 236.0
+incorrect
+TP: 195.0
+FP: 26.0
+FN: 43.0
+evaluate 1010 images
+mask, set confidence score is 0.35, precision: 0.8708183221821925, recall: 0.8886554621848739
+nomask, set confidence score is 0.35, precision: 0.7876230661040787, recall: 0.7035175879396985
+incorrect, set confidence score is 0.35, precision: 0.8944954128440367, recall: 0.819327731092437
+dpu_yolov5m_facemask_acc_0.35_0.6.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8655125770334068
+nomask AP: 0.6863502268823862
+incorrect AP: 0.8149277649069413
+mAP: 0.7889301896075781
+mask
+TP: 1711.0
+FP: 292.0
+FN: 193.0
+nomask
+TP: 576.0
+FP: 169.0
+FN: 220.0
+incorrect
+TP: 198.0
+FP: 33.0
+FN: 40.0
+evaluate 1010 images
+mask, set confidence score is 0.3, precision: 0.854218671992012, recall: 0.8986344537815126
+nomask, set confidence score is 0.3, precision: 0.7731543624161074, recall: 0.7236180904522613
+incorrect, set confidence score is 0.3, precision: 0.8571428571428571, recall: 0.8319327731092437
+dpu_yolov5m_facemask_acc_0.3_0.6.txt evaluated!
+evaluate 1010 images
+mask AP: 0.873026862766702
+nomask AP: 0.698831724715282
+incorrect AP: 0.8149770373303749
+mAP: 0.7956118749374529
+mask
+TP: 1728.0
+FP: 339.0
+FN: 176.0
+nomask
+TP: 589.0
+FP: 194.0
+FN: 207.0
+incorrect
+TP: 198.0
+FP: 35.0
+FN: 40.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8372093023255814, recall: 0.907563025210084
+nomask, set confidence score is 0.25, precision: 0.7541613316261203, recall: 0.7399497487437185
+incorrect, set confidence score is 0.25, precision: 0.8571428571428571, recall: 0.8319327731092437
+dpu_yolov5m_facemask_acc_0.25_0.6.txt evaluated!
+5-2
+evaluate 1010 images
+mask AP: 0.8269043414652824
+nomask AP: 0.6337791359415086
+incorrect AP: 0.7955248665973476
+mAP: 0.7520694480013795
+mask
+TP: 1647.0
+FP: 256.0
+FN: 257.0
+nomask
+TP: 530.0
+FP: 141.0
+FN: 266.0
+incorrect
+TP: 194.0
+FP: 28.0
+FN: 44.0
+evaluate 1010 images
+mask, set confidence score is 0.45, precision: 0.8654755648975302, recall: 0.8650210084033614
+nomask, set confidence score is 0.45, precision: 0.7910447761194029, recall: 0.6658291457286433
+incorrect, set confidence score is 0.45, precision: 0.8738738738738738, recall: 0.8151260504201681
+dpu_yolov5m_facemask_acc_0.45_0.65.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8358759955464516
+nomask AP: 0.640333859031214
+incorrect AP: 0.8003307388959586
+mAP: 0.7588468644912081
+mask
+TP: 1647.0
+FP: 184.0
+FN: 257.0
+nomask
+TP: 530.0
+FP: 115.0
+FN: 266.0
+incorrect
+TP: 194.0
+FP: 23.0
+FN: 44.0
+evaluate 1010 images
+mask, set confidence score is 0.45, precision: 0.8995084653194976, recall: 0.8650210084033614
+nomask, set confidence score is 0.45, precision: 0.8229813664596274, recall: 0.6658291457286433
+incorrect, set confidence score is 0.45, precision: 0.8940092165898618, recall: 0.8151260504201681
+dpu_yolov5m_facemask_acc_0.45_0.6.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8380388651454387
+nomask AP: 0.6422432105882065
+incorrect AP: 0.8003755787314328
+mAP: 0.7602192181550261
+mask
+TP: 1647.0
+FP: 163.0
+FN: 257.0
+nomask
+TP: 530.0
+FP: 102.0
+FN: 266.0
+incorrect
+TP: 194.0
+FP: 22.0
+FN: 44.0
+evaluate 1010 images
+mask, set confidence score is 0.45, precision: 0.9104477611940298, recall: 0.8650210084033614
+nomask, set confidence score is 0.45, precision: 0.8399366085578447, recall: 0.6658291457286433
+incorrect, set confidence score is 0.45, precision: 0.8981481481481481, recall: 0.8151260504201681
+dpu_yolov5m_facemask_acc_0.45_0.55.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8381744917521685
+nomask AP: 0.6423539462070225
+incorrect AP: 0.8003755787314328
+mAP: 0.7603013388968746
+mask
+TP: 1647.0
+FP: 161.0
+FN: 257.0
+nomask
+TP: 530.0
+FP: 101.0
+FN: 266.0
+incorrect
+TP: 194.0
+FP: 22.0
+FN: 44.0
+evaluate 1010 images
+mask, set confidence score is 0.45, precision: 0.9109513274336283, recall: 0.8650210084033614
+nomask, set confidence score is 0.45, precision: 0.8412698412698413, recall: 0.6658291457286433
+incorrect, set confidence score is 0.45, precision: 0.8981481481481481, recall: 0.8151260504201681
+dpu_yolov5m_facemask_acc_0.45_0.5.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8381744917521685
+nomask AP: 0.6427418030246241
+incorrect AP: 0.8003755787314328
+mAP: 0.7604306245027418
+mask
+TP: 1647.0
+FP: 161.0
+FN: 257.0
+nomask
+TP: 530.0
+FP: 100.0
+FN: 266.0
+incorrect
+TP: 194.0
+FP: 22.0
+FN: 44.0
+evaluate 1010 images
+mask, set confidence score is 0.45, precision: 0.9109513274336283, recall: 0.8650210084033614
+nomask, set confidence score is 0.45, precision: 0.8426073131955485, recall: 0.6658291457286433
+incorrect, set confidence score is 0.45, precision: 0.8981481481481481, recall: 0.8151260504201681
+dpu_yolov5m_facemask_acc_0.45_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8381744917521685
+nomask AP: 0.6427418030246241
+incorrect AP: 0.8003755787314328
+mAP: 0.7604306245027418
+mask
+TP: 1647.0
+FP: 161.0
+FN: 257.0
+nomask
+TP: 530.0
+FP: 100.0
+FN: 266.0
+incorrect
+TP: 194.0
+FP: 22.0
+FN: 44.0
+evaluate 1010 images
+mask, set confidence score is 0.45, precision: 0.9109513274336283, recall: 0.8650210084033614
+nomask, set confidence score is 0.45, precision: 0.8426073131955485, recall: 0.6658291457286433
+incorrect, set confidence score is 0.45, precision: 0.8981481481481481, recall: 0.8151260504201681
+dpu_yolov5m_facemask_acc_0.45_0.4.txt evaluated!
+done
+yolov3
+evaluate 1010 images
+mask AP: 0.644936148367993
+nomask AP: 0.4279411160857137
+incorrect AP: 0.5076388772207847
+mAP: 0.5268387138914971
+mask
+TP: 1268.0
+FP: 124.0
+FN: 636.0
+nomask
+TP: 375.0
+FP: 118.0
+FN: 421.0
+incorrect
+TP: 122.0
+FP: 4.0
+FN: 116.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.9109195402298851, recall: 0.6659663865546218
+nomask, set confidence score is 0.2, precision: 0.7606490872210954, recall: 0.47110552763819097
+incorrect, set confidence score is 0.2, precision: 0.9682539682539683, recall: 0.5126050420168067
+dpu_yolov3_facemask_acc_0.2_0.35.txt evaluated!
+evaluate 1010 images
+mask AP: 0.666850601678851
+nomask AP: 0.4604429556368173
+incorrect AP: 0.5156841866907266
+mAP: 0.5476592480021316
+mask
+TP: 1314.0
+FP: 149.0
+FN: 590.0
+nomask
+TP: 409.0
+FP: 142.0
+FN: 387.0
+incorrect
+TP: 124.0
+FP: 9.0
+FN: 114.0
+evaluate 1010 images
+mask, set confidence score is 0.15, precision: 0.8987688098495212, recall: 0.6901260504201681
+nomask, set confidence score is 0.15, precision: 0.7449908925318761, recall: 0.5138190954773869
+incorrect, set confidence score is 0.15, precision: 0.9538461538461539, recall: 0.5210084033613446
+dpu_yolov3_facemask_acc_0.15_0.35.txt evaluated!
+evaluate 1010 images
+mask AP: 0.700094948687738
+nomask AP: 0.48706729574493796
+incorrect AP: 0.5350856254245316
+mAP: 0.5740826232857358
+mask
+TP: 1385.0
+FP: 194.0
+FN: 519.0
+nomask
+TP: 438.0
+FP: 184.0
+FN: 358.0
+incorrect
+TP: 129.0
+FP: 14.0
+FN: 109.0
+evaluate 1010 images
+mask, set confidence score is 0.1, precision: 0.8782498414711477, recall: 0.7274159663865546
+nomask, set confidence score is 0.1, precision: 0.7087378640776699, recall: 0.550251256281407
+incorrect, set confidence score is 0.1, precision: 0.9020979020979021, recall: 0.542016806722689
+dpu_yolov3_facemask_acc_0.1_0.35.txt evaluated!
+yolov4
+evaluate 1010 images
+mask AP: 0.8257436352790666
+nomask AP: 0.6474540374888661
+incorrect AP: 0.7618503676433497
+mAP: 0.7450160134704275
+mask
+TP: 1622.0
+FP: 198.0
+FN: 282.0
+nomask
+TP: 542.0
+FP: 114.0
+FN: 254.0
+incorrect
+TP: 186.0
+FP: 27.0
+FN: 52.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8912087912087913, recall: 0.851890756302521
+nomask, set confidence score is 0.25, precision: 0.8300153139356815, recall: 0.6809045226130653
+incorrect, set confidence score is 0.25, precision: 0.8732394366197183, recall: 0.7815126050420168
+dpu_yolov4_facemask_acc_0.25_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8396801548432612
+nomask AP: 0.6658499174989652
+incorrect AP: 0.7654381041077984
+mAP: 0.7569893921500083
+mask
+TP: 1652.0
+FP: 234.0
+FN: 252.0
+nomask
+TP: 560.0
+FP: 142.0
+FN: 236.0
+incorrect
+TP: 187.0
+FP: 34.0
+FN: 51.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.8773234200743495, recall: 0.8676470588235294
+nomask, set confidence score is 0.2, precision: 0.7988587731811697, recall: 0.7035175879396985
+incorrect, set confidence score is 0.2, precision: 0.8538812785388128, recall: 0.7857142857142857
+dpu_yolov4_facemask_acc_0.2_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8524088115764021
+nomask AP: 0.6824522213003431
+incorrect AP: 0.7865147289501129
+mAP: 0.7737919206089527
+mask
+TP: 1680.0
+FP: 286.0
+FN: 224.0
+nomask
+TP: 577.0
+FP: 186.0
+FN: 219.0
+incorrect
+TP: 193.0
+FP: 39.0
+FN: 45.0
+evaluate 1010 images
+mask, set confidence score is 0.15, precision: 0.8549618320610687, recall: 0.8823529411764706
+nomask, set confidence score is 0.15, precision: 0.7632275132275133, recall: 0.7248743718592965
+incorrect, set confidence score is 0.15, precision: 0.8318965517241379, recall: 0.8109243697478992
+dpu_yolov4_facemask_acc_0.15_0.4.txt evaluated!
+yolov5m
+evaluate 1010 images
+mask AP: 0.868107034559221
+nomask AP: 0.6901083541769526
+incorrect AP: 0.8152549159557116
+mAP: 0.7911567682306284
+mask
+TP: 1711.0
+FP: 248.0
+FN: 193.0
+nomask
+TP: 576.0
+FP: 146.0
+FN: 220.0
+incorrect
+TP: 198.0
+FP: 30.0
+FN: 40.0
+evaluate 1010 images
+mask, set confidence score is 0.3, precision: 0.8734047983665135, recall: 0.8986344537815126
+nomask, set confidence score is 0.3, precision: 0.7977839335180056, recall: 0.7236180904522613
+incorrect, set confidence score is 0.3, precision: 0.868421052631579, recall: 0.8319327731092437
+dpu_yolov5m_facemask_acc_0.3_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8754789470544291
+nomask AP: 0.7029915552684148
+incorrect AP: 0.8151360140403521
+mAP: 0.797868838787732
+mask
+TP: 1727.0
+FP: 283.0
+FN: 177.0
+nomask
+TP: 589.0
+FP: 165.0
+FN: 207.0
+incorrect
+TP: 198.0
+FP: 32.0
+FN: 40.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8600597609561753, recall: 0.9070378151260504
+nomask, set confidence score is 0.25, precision: 0.7832446808510638, recall: 0.7399497487437185
+incorrect, set confidence score is 0.25, precision: 0.868421052631579, recall: 0.8319327731092437
+dpu_yolov5m_facemask_acc_0.25_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8812055446705762
+nomask AP: 0.7204624248263598
+incorrect AP: 0.8224742541823752
+mAP: 0.8080474078931038
+mask
+TP: 1740.0
+FP: 325.0
+FN: 164.0
+nomask
+TP: 607.0
+FP: 186.0
+FN: 189.0
+incorrect
+TP: 200.0
+FP: 37.0
+FN: 38.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.8430232558139535, recall: 0.9138655462184874
+nomask, set confidence score is 0.2, precision: 0.7664141414141414, recall: 0.7625628140703518
+incorrect, set confidence score is 0.2, precision: 0.847457627118644, recall: 0.8403361344537815
+dpu_yolov5m_facemask_acc_0.2_0.45.txt evaluated!
+done
+yolov3-tiny
+evaluate 1010 images
+mask AP: 0.6487631018756316
+nomask AP: 0.436289709602846
+incorrect AP: 0.4977072495781837
+mAP: 0.5275866870188871
+mask
+TP: 1289.0
+FP: 157.0
+FN: 615.0
+nomask
+TP: 379.0
+FP: 112.0
+FN: 417.0
+incorrect
+TP: 124.0
+FP: 36.0
+FN: 114.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.8914246196403873, recall: 0.6769957983193278
+nomask, set confidence score is 0.2, precision: 0.7718940936863544, recall: 0.47613065326633164
+incorrect, set confidence score is 0.2, precision: 0.779874213836478, recall: 0.5210084033613446
+dpu_yolov3-tiny_facemask_acc_0.2_0.35.txt evaluated!
+evaluate 1010 images
+mask AP: 0.673626633872636
+nomask AP: 0.4664233643005752
+incorrect AP: 0.5319676806108599
+mAP: 0.557339226261357
+mask
+TP: 1343.0
+FP: 212.0
+FN: 561.0
+nomask
+TP: 411.0
+FP: 156.0
+FN: 385.0
+incorrect
+TP: 135.0
+FP: 52.0
+FN: 103.0
+evaluate 1010 images
+mask, set confidence score is 0.15, precision: 0.8636655948553055, recall: 0.7053571428571429
+nomask, set confidence score is 0.15, precision: 0.7287234042553191, recall: 0.5163316582914573
+incorrect, set confidence score is 0.15, precision: 0.7219251336898396, recall: 0.5672268907563025
+dpu_yolov3-tiny_facemask_acc_0.15_0.35.txt evaluated!
+evaluate 1010 images
+mask AP: 0.7105062673219091
+nomask AP: 0.5014803533504666
+incorrect AP: 0.5436725781724855
+mAP: 0.585219732948287
+mask
+TP: 1426.0
+FP: 317.0
+FN: 478.0
+nomask
+TP: 451.0
+FP: 237.0
+FN: 345.0
+incorrect
+TP: 139.0
+FP: 83.0
+FN: 99.0
+evaluate 1010 images
+mask, set confidence score is 0.1, precision: 0.8204833141542003, recall: 0.7489495798319328
+nomask, set confidence score is 0.1, precision: 0.6564774381368268, recall: 0.5665829145728644
+incorrect, set confidence score is 0.1, precision: 0.6780487804878049, recall: 0.5840336134453782
+dpu_yolov3-tiny_facemask_acc_0.1_0.35.txt evaluated!
+yolov4-tiny
+evaluate 1010 images
+mask AP: 0.15278388633821344
+nomask AP: 0.08397941790586869
+incorrect AP: 0.054155468038525285
+mAP: 0.09697292409420248
+mask
+TP: 570.0
+FP: 755.0
+FN: 1334.0
+nomask
+TP: 121.0
+FP: 198.0
+FN: 675.0
+incorrect
+TP: 35.0
+FP: 83.0
+FN: 203.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.43018867924528303, recall: 0.29936974789915966
+nomask, set confidence score is 0.25, precision: 0.3793103448275862, recall: 0.15201005025125627
+incorrect, set confidence score is 0.25, precision: 0.3431372549019608, recall: 0.14705882352941177
+dpu_yolov4-tiny_facemask_acc_0.25_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.16044994691962988
+nomask AP: 0.09024833603173549
+incorrect AP: 0.05939916551751688
+mAP: 0.10336581615629409
+mask
+TP: 603.0
+FP: 851.0
+FN: 1301.0
+nomask
+TP: 135.0
+FP: 248.0
+FN: 661.0
+incorrect
+TP: 39.0
+FP: 100.0
+FN: 199.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.4150034411562285, recall: 0.3167016806722689
+nomask, set confidence score is 0.2, precision: 0.3543307086614173, recall: 0.16959798994974876
+incorrect, set confidence score is 0.2, precision: 0.312, recall: 0.1638655462184874
+dpu_yolov4-tiny_facemask_acc_0.2_0.4.txt evaluated!
+evaluate 1010 images
+mask AP: 0.16855948492627015
+nomask AP: 0.09660973688875168
+incorrect AP: 0.06893320382290502
+mAP: 0.11136747521264229
+mask
+TP: 642.0
+FP: 966.0
+FN: 1262.0
+nomask
+TP: 150.0
+FP: 314.0
+FN: 646.0
+incorrect
+TP: 47.0
+FP: 127.0
+FN: 191.0
+evaluate 1010 images
+mask, set confidence score is 0.15, precision: 0.4, recall: 0.33718487394957986
+nomask, set confidence score is 0.15, precision: 0.32751091703056767, recall: 0.1884422110552764
+incorrect, set confidence score is 0.15, precision: 0.27325581395348836, recall: 0.19747899159663865
+dpu_yolov4-tiny_facemask_acc_0.15_0.4.txt evaluated!
+yolov5s
+evaluate 1010 images
+mask AP: 0.8622209445611876
+nomask AP: 0.6774499152056773
+incorrect AP: 0.7964759868677963
+mAP: 0.7787156155448871
+mask
+TP: 1688.0
+FP: 254.0
+FN: 216.0
+nomask
+TP: 568.0
+FP: 154.0
+FN: 228.0
+incorrect
+TP: 195.0
+FP: 23.0
+FN: 43.0
+evaluate 1010 images
+mask, set confidence score is 0.3, precision: 0.8710010319917441, recall: 0.8865546218487395
+nomask, set confidence score is 0.3, precision: 0.7867036011080333, recall: 0.7135678391959799
+incorrect, set confidence score is 0.3, precision: 0.9112149532710281, recall: 0.819327731092437
+dpu_yolov5s_facemask_acc_0.3_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8690599729853367
+nomask AP: 0.6940234419450895
+incorrect AP: 0.7964487691773712
+mAP: 0.7865107280359324
+mask
+TP: 1703.0
+FP: 302.0
+FN: 201.0
+nomask
+TP: 585.0
+FP: 181.0
+FN: 211.0
+incorrect
+TP: 195.0
+FP: 27.0
+FN: 43.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.8519259629814907, recall: 0.8944327731092437
+nomask, set confidence score is 0.25, precision: 0.7687253613666228, recall: 0.7349246231155779
+incorrect, set confidence score is 0.25, precision: 0.9112149532710281, recall: 0.819327731092437
+dpu_yolov5s_facemask_acc_0.25_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8756063429946482
+nomask AP: 0.7071352617045028
+incorrect AP: 0.8038149844137172
+mAP: 0.7955188630376228
+mask
+TP: 1718.0
+FP: 343.0
+FN: 186.0
+nomask
+TP: 599.0
+FP: 209.0
+FN: 197.0
+incorrect
+TP: 197.0
+FP: 32.0
+FN: 41.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.8335759340126152, recall: 0.9023109243697479
+nomask, set confidence score is 0.2, precision: 0.7422552664188352, recall: 0.7525125628140703
+incorrect, set confidence score is 0.2, precision: 0.8716814159292036, recall: 0.8277310924369747
+dpu_yolov5s_facemask_acc_0.2_0.45.txt evaluated!
+yolov5n
+evaluate 1010 images
+mask AP: 0.8511966280292473
+nomask AP: 0.6335770588661737
+incorrect AP: 0.7779884807210347
+mAP: 0.7542540558721519
+mask
+TP: 1682.0
+FP: 348.0
+FN: 222.0
+nomask
+TP: 536.0
+FP: 189.0
+FN: 260.0
+incorrect
+TP: 193.0
+FP: 43.0
+FN: 45.0
+evaluate 1010 images
+mask, set confidence score is 0.3, precision: 0.8285714285714286, recall: 0.8834033613445378
+nomask, set confidence score is 0.3, precision: 0.7403314917127072, recall: 0.6733668341708543
+incorrect, set confidence score is 0.3, precision: 0.8212765957446808, recall: 0.8109243697478992
+dpu_yolov5n_facemask_acc_0.3_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8608712701207069
+nomask AP: 0.6463797004035212
+incorrect AP: 0.7779884807210347
+mAP: 0.7617464837484209
+mask
+TP: 1705.0
+FP: 446.0
+FN: 199.0
+nomask
+TP: 550.0
+FP: 236.0
+FN: 246.0
+incorrect
+TP: 193.0
+FP: 43.0
+FN: 45.0
+evaluate 1010 images
+mask, set confidence score is 0.25, precision: 0.7937616387337058, recall: 0.895483193277311
+nomask, set confidence score is 0.25, precision: 0.7078507078507078, recall: 0.6909547738693468
+incorrect, set confidence score is 0.25, precision: 0.8212765957446808, recall: 0.8109243697478992
+dpu_yolov5n_facemask_acc_0.25_0.45.txt evaluated!
+evaluate 1010 images
+mask AP: 0.8674694725399087
+nomask AP: 0.656611709895013
+incorrect AP: 0.7847479713336432
+mAP: 0.7696097179228549
+mask
+TP: 1721.0
+FP: 498.0
+FN: 183.0
+nomask
+TP: 562.0
+FP: 278.0
+FN: 234.0
+incorrect
+TP: 195.0
+FP: 59.0
+FN: 43.0
+evaluate 1010 images
+mask, set confidence score is 0.2, precision: 0.775574583145561, recall: 0.9038865546218487
+nomask, set confidence score is 0.2, precision: 0.6698450536352801, recall: 0.7060301507537688
+incorrect, set confidence score is 0.2, precision: 0.8057851239669421, recall: 0.819327731092437
+dpu_yolov5n_facemask_acc_0.2_0.45.txt evaluated!
+done
+(vitis-ai-pytorch) Vitis-AI /workspace/evaluation > 
+
