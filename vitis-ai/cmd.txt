@@ -1,0 +1,140 @@
+Complete Cross Compiler installation
+
+Please run the following command to enable Cross Compiler
+    source /home/nhan/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
+If you run the above command failed, run the following commands to enable Cross Compiler
+    unset LD_LIBRARY_PATH
+    source /home/nhan/petalinux_sdk_2022.2/environment-setup-cortexa72-cortexa53-xilinx-linux
+
+copy file:  
+1 model
+2 prototxt (sua theo anchor box va netron va sua ten)
+3 file thuc thi cpp
+
+sudo cp -r thumucnguon thumucdich
+sudo rm -r -f /path/ xoa thu muc path
+
+sudo minicom -D /dev/ttyUSB1
+
+export DISPLAY=:0.0
+xrandr --output DP-1 --mode 800x600
+xrandr --output DP-1 --mode 1600x900
+
+test application:
+
+cd ./Vitis-AI/examples/vai_library/samples/app
+
+./test_video face_mask_detection_pt 0 -t 4
+
+./test_video dpu_yolov4_facemask 0 -t 4
+
+
+./test_video dpu_yolov3-tiny_facemask video/VID_20230701_155547.webm -t 4
+
+mkdir result
+
+mkdir result_1
+
+./test_img dpu_yolov5s_facemask frame result
+
+./test_img dpu_yolov5s_facemask frame_1 result_1
+
+./test_video dpu_yolov3-tiny_facemask 0 -t 4
+
+./test_video dpu_yolov5s_facemask 0 -t 4
+
+./test_video dpu_yolov5n_facemask video/VID_20230701_155547.webm -t 4
+
+./test_video dpu_yolov5s_facemask video/VID_20230701_155547.webm -t 4
+
+./test_video dpu_yolov5s_facemask video/u2b.webm -t 4
+
+accuracy:
+
+chmod +x accuracy_run.sh
+./accuracy_run.sh
+
+./test_accuracy_facemask list_filename.txt evaluation/labels_anchors_result_3.txt dpu_yolov3_facemask_acc
+./test_accuracy_facemask list_filename.txt evaluation/labels_anchors_result_3t.txt dpu_yolov3-tiny_facemask_acc
+./test_accuracy_facemask list_filename.txt evaluation/labels_anchors_result_4.txt dpu_yolov4_facemask_acc
+./test_accuracy_facemask list_filename.txt evaluation/labels_anchors_result_4t.txt dpu_yolov4-tiny_facemask_acc
+./test_accuracy_facemask list_filename.txt evaluation/labels_anchors_result_5m.txt dpu_yolov5m_facemask_acc
+./test_accuracy_facemask list_filename.txt evaluation/labels_anchors_result_5s.txt dpu_yolov5s_facemask_acc
+./test_accuracy_facemask list_filename.txt evaluation/labels_anchors_result_5n.txt dpu_yolov5n_facemask_acc
+
+performance:
+chmod +x performance.sh
+./performance.sh
+
+
+
+./test_video dpu_yolov3_facemask video/u2b.webm -t 1 21.3
+./test_video dpu_yolov3-tiny_facemask video/u2b.webm -t 1 17.0
+./test_video dpu_yolov4_facemask video/u2b.webm -t 1 21.0
+./test_video dpu_yolov4-tiny_facemask video/u2b.webm -t 1 17.3
+./test_video dpu_yolov5m_facemask video/u2b.webm -t 1 18.2
+./test_video dpu_yolov5s_facemask video/u2b.webm -t 1 17.3
+./test_video dpu_yolov5n_facemask video/u2b.webm -t 1 16.7
+
+
+./test_video dpu_yolov3_facemask video/u2b.webm -t 2 21.6
+./test_video dpu_yolov3-tiny_facemask video/u2b.webm -t 2 17.3
+./test_video dpu_yolov4_facemask video/u2b.webm -t 2 21.3
+./test_video dpu_yolov4-tiny_facemask video/u2b.webm -t 2 17.3
+./test_video dpu_yolov5m_facemask video/u2b.webm -t 2  18.5
+./test_video dpu_yolov5s_facemask video/u2b.webm -t 2 17.6
+./test_video dpu_yolov5n_facemask video/u2b.webm -t 2 17.0
+
+
+./test_video dpu_yolov3_facemask video/u2b.webm -t 3 21.6 
+./test_video dpu_yolov3-tiny_facemask video/u2b.webm -t 3  17.3
+./test_video dpu_yolov4_facemask video/u2b.webm -t 3 21.3
+./test_video dpu_yolov4-tiny_facemask video/u2b.webm -t 3 17.6
+./test_video dpu_yolov5m_facemask video/u2b.webm -t 3 18.5
+./test_video dpu_yolov5s_facemask video/u2b.webm -t 3 17.6
+./test_video dpu_yolov5n_facemask video/u2b.webm -t 3 17.0
+
+
+./test_video dpu_yolov3_facemask video/u2b.webm -t 4 21.6
+./test_video dpu_yolov3-tiny_facemask video/u2b.webm -t 4 17.3
+./test_video dpu_yolov4_facemask video/u2b.webm -t 4 21.3
+./test_video dpu_yolov4-tiny_facemask video/u2b.webm -t 4 17.6
+./test_video dpu_yolov5m_facemask video/u2b.webm -t 4 18.5
+./test_video dpu_yolov5s_facemask video/u2b.webm -t 4 17.6
+./test_video dpu_yolov5n_facemask video/u2b.webm -t 4 17.0
+
+
+./test_video dpu_yolov3_facemask video/u2b.webm -t 5 21.6
+./test_video dpu_yolov3-tiny_facemask video/u2b.webm -t 5 17.3
+./test_video dpu_yolov4_facemask video/u2b.webm -t 5 21.3
+./test_video dpu_yolov4-tiny_facemask video/u2b.webm -t 5 17.6
+./test_video dpu_yolov5m_facemask video/u2b.webm -t 5 18.2
+./test_video dpu_yolov5s_facemask video/u2b.webm -t 5 17.0
+./test_video dpu_yolov5n_facemask video/u2b.webm -t 5 16.7
+
+
+./test_video dpu_yolov3_facemask video/u2b.webm -t 6 21.6
+./test_video dpu_yolov3-tiny_facemask video/u2b.webm -t 6 17.3
+./test_video dpu_yolov4_facemask video/u2b.webm -t 6 21.3
+./test_video dpu_yolov4-tiny_facemask video/u2b.webm -t 6 17.3
+./test_video dpu_yolov5m_facemask video/u2b.webm -t 6 18.5
+./test_video dpu_yolov5s_facemask video/u2b.webm -t 6 17.3
+./test_video dpu_yolov5n_facemask video/u2b.webm -t 6 16.7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
